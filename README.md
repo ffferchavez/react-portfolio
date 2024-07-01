@@ -1,7 +1,5 @@
 # React Portfolio
 
-![React Portfolio](/path/to/your/portfolio/screenshot.png)
-
 ## Overview
 
 This repository contains my personal portfolio built with React, showcasing my skills, projects, and contact information. The portfolio is designed to demonstrate my proficiency in various technologies and frameworks relevant to web development.
