@@ -60,6 +60,17 @@ const Projects = () => {
                 >
                   Code Here!
                 </a>
+                {project.caseStudyLink && (
+                  <a
+                    href={project.caseStudyLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-4 bg-gray-200 hover:bg-gray-400 text-gray-700 py-1 px-1 rounded-sm inline-block transition duration-300 text-sm"
+                    style={{ fontSize: '0.7rem', opacity: 0.3 }}
+                  >
+                    View Case Study
+                  </a>
+                )}
               </div>
             </motion.div>
           </div>

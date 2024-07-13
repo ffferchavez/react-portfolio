@@ -75,6 +75,7 @@ export const PROJECTS = [
     technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js"],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
+    caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
   },
   {
     title: "Marvel Flix RESTful API",
