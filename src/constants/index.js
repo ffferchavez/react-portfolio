@@ -5,9 +5,17 @@ import project4 from "../assets/projects/project-4.png";
 import project5 from "../assets/projects/project-5.png";
 import project6 from "../assets/projects/project-6.png";
 
-export const HERO_CONTENT = `I'm a Full-Stack Developer with a Mechatronics background with a strong interest for Web Development, Fintech, AI, and cutting-edge technology. Through diverse experiences in the fields of Materials, Manufacturing, Automotive and Design, I have gained valuable insights and broadened my horizons. My focus has shifted to Software Development, where I have honed my skills in various programming languages and frameworks. With a goal of continuous improvement, I stay updated on the latest technologies and best practices. Effective communication and teamwork are integral parts of my work approach, while my hobbies in CAD design, 3D printing, lasers and electronics foster my creativity. I am excited to develop myself as professional in the Tech Field and take on new challenges.`;
+export const HERO_CONTENT = 
+`Full-stack Web Developer with more than a decade of Mechatronics experience, skilled in building
+responsive applications using React and Node.js, among others.
+Combines technical precision and innovative problem-solving to optimize performance and enhance
+user experiences.`;
 
-export const ABOUT_TEXT = `As an accomplished Full-Stack Web Developer, I've honed a diverse skill set spanning a wide range of cutting-edge technologies, including React, Angular, Vue, Node.js, MongoDB, Express, Python, Django, PostgreSQL, AWS Lambda, and Docker, among others. What initially ignited my passion for web development was a deep fascination with how digital systems work, and this curiosity has evolved into a relentless drive to tackle complex challenges and deliver exceptional solutions. Thriving in collaborative environments, I excel at effective communication, attention to detail, and a commitment to excellence that permeates every aspect of my work. Beyond just coding, I pursue a balanced lifestyle through physical activity and personal growth, all of which fuel my enthusiasm to make a lasting impact in the ever-evolving tech landscape!`;
+export const ABOUT_TEXT = 
+`<p>Hi, I’m a Full-Stack Web Developer transitioning from more than a decade in Mechatronics. This unique journey has shaped me into a developer who blends technical precision with innovative problem-solving.</p>
+<p>I build responsive, efficient applications using React and Node.js, always prioritizing user experience. My engineering background gives me a strong analytical foundation, enabling me to tackle complex challenges methodically.</p>
+<p>Additionally, my curiosity and passion for learning drive me to explore new technologies and creative solutions. I’m eager to join a forward-thinking tech company where I can leverage my diverse skill set, bring fresh perspectives, and contribute to impactful projects.</p>
+<p>I’m not just changing careers – I’m evolving my professional identity to merge the best of both worlds.</p>`;
 
 export const EXPERIENCES = [
   {
@@ -51,11 +59,11 @@ Active participation in the planning of new applications, whereby I can contribu
 
 export const PROJECTS = [
   {
-    title: "Meet App",
+    title: "Meet App: Event Discovery PWA",
     image: project6,
     description:
-      "Meet is a PWA designed to display and manage events filtered by city using the Google Calendar API. Developed with React OOP, TDD, and BDD methodologies, it ensures a high-quality codebase. The app supports offline capability and can be installed on your phone or desktop. User authorization tokens and credentials are managed securely through AWS Lambda, leveraging a serverless architecture for efficient data handling and retrieval.",
-    technologies: ["React", "Google API", "AWS Lambda", "Jest", "Cucumber"],
+      "Meet is a Progressive Web App for event discovery and management, integrating with the Google Calendar API. Built with React and following TDD/BDD practices, it offers city-based event filtering, offline functionality, and data visualization. The app utilizes AWS Lambda and a serverless architecture for backend processes, ensuring scalable and secure performance. Installable on both desktop and mobile devices, Meet provides a seamless user experience across platforms.",
+    technologies: ["React" , "PWA", "AWS Lambda", "Node.js", "Express.js", "MongoDB", "Jest", "Cucumber", "OAuth 2.0", "Recharts", "Service Workers"],
     githubLink: "https://github.com/ffferchavez/meet",
     projectUrl: "https://ffferchavez.github.io/meet/",
   },
@@ -63,7 +71,7 @@ export const PROJECTS = [
     title: "Marvel Flix - Frontend",
     image: project2,
     description:
-      "This project is a front-end application built to interact with a my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and ratings, and manage their own movie lists.",
+      "This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own movie lists.",
     technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js"],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
@@ -128,7 +136,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Dresdener Str. 14, 47533 Kleve, Germany",
+  address: "Kleve, Germany",
   phoneNo: "+49 152 217 95849 ",
   email: "ffferchavez@gmail.com",
 };

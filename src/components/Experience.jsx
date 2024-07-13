@@ -37,15 +37,17 @@ const Experience = () => {
                 </span>
               </h6>
               <p className="mb-4 text-neutral-400">{experience.description}</p>
-              {experience.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium"
-                  style={{ color: '#48CAE4' }}
-                >
-                  {tech}
-                </span>
-              ))}
+              <div className="flex flex-wrap mb-4">
+                {experience.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="mr-2 mb-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium"
+                    style={{ color: '#48CAE4' }}
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         ))}
@@ -62,7 +64,7 @@ const Experience = () => {
           className="text-white no-underline"
           style={{ textDecoration: "none", color: "#FFFFFF", transition: "color 0.3s ease" }}
         >
-          Download my CV here
+          CV Download
         </a>
         <style>
           {`

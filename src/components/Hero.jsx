@@ -80,7 +80,7 @@ const Hero = () => {
             background-size: cover;
             background-position: center;
             animation: morph 3.75s linear infinite;
-            filter: grayscale(50%);
+            filter: grayscale;
           }
         `}
       </style>
