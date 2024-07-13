@@ -1,6 +1,6 @@
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
-import cvPdf from "../assets/myCV.pdf";
+import cvPdf from "../assets/chavez-manuel-resume.pdf";
 
 const Experience = () => {
   return (
@@ -64,7 +64,7 @@ const Experience = () => {
           className="text-white no-underline"
           style={{ textDecoration: "none", color: "#FFFFFF", transition: "color 0.3s ease" }}
         >
-          CV Download
+          Resume Download
         </a>
         <style>
           {`
