@@ -1,5 +1,5 @@
 import logo from "../assets/mfLogo.png";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaMedium } from "react-icons/fa"; // Added FaMedium
 
 const Navbar = () => {
   return (
@@ -16,8 +16,11 @@ const Navbar = () => {
         <a href="https://github.com/ffferchavez" target="_blank" rel="noopener noreferrer">
           <FaGithub />
         </a>
-        <a href="https://x.com/ffferchavez" target="_blank" rel="noopener noreferrer"> {/* Updated link */}
-          <FaTwitter /> {/* Updated icon */}
+        <a href="https://x.com/ffferchavez" target="_blank" rel="noopener noreferrer">
+          <FaTwitter />
+        </a>
+        <a href="https://medium.com/@ffferchavez" target="_blank" rel="noopener noreferrer">
+          <FaMedium />
         </a>
       </div>
     </nav>
