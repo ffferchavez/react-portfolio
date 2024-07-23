@@ -17,7 +17,7 @@ const About = () => {
           className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center"
           style={{ height: '500px' }}
         >
-          <div className="rounded-2xl overflow-hidden filter grayscale-[40%] brightness-75" style={{ width: '500px', height: '500px' }}>
+          <div className="rounded-2xl overflow-hidden filter grayscale-[50%] brightness-85" style={{ width: '500px', height: '500px' }}>
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

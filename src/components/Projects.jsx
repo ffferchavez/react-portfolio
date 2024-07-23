@@ -19,17 +19,29 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full lg:w-1/4"
+              className="w-full lg:w-1/4 flex flex-col items-center"
             >
-              <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+              <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="block">
                 <img
                   src={project.image}
                   width={150}
                   height={150}
                   alt={project.title}
-                  className="mb-6 rounded transform transition-transform duration-300 hover:scale-105"
+                  className="mb-2 rounded transform transition-transform duration-300 hover:scale-105"
                 />
               </a>
+              <motion.a
+                href={project.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-300 mt-2 email-link"
+                whileHover={{ color: "#00B4D8" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                Check Me Out
+              </motion.a>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +70,7 @@ const Projects = () => {
                   className="bg-gray-200 hover:bg-gray-400 text-gray-700 py-1 px-1 rounded-sm inline-block transition duration-300 text-sm"
                   style={{ fontSize: '0.7rem', opacity: 0.3 }}
                 >
-                  Code Here!
+                  Github Code
                 </a>
                 {project.caseStudyLink && (
                   <a
@@ -68,7 +80,7 @@ const Projects = () => {
                     className="ml-4 bg-gray-200 hover:bg-gray-400 text-gray-700 py-1 px-1 rounded-sm inline-block transition duration-300 text-sm"
                     style={{ fontSize: '0.7rem', opacity: 0.3 }}
                   >
-                    View Case Study
+                    Case Study
                   </a>
                 )}
               </div>

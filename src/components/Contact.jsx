@@ -39,12 +39,24 @@ const Contact = () => {
         >
           {CONTACT.email}
         </motion.a>
+        <motion.a
+          href="src/constants/impressum.html"
+          className="impressum-link"
+          whileHover={{ color: "#48CAE4" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Impressum
+        </motion.a>
       </div>
 
       <style>{`
-        .email-link {
+        .email-link, .impressum-link {
           color: #FFFFFF;
           text-decoration: none;
+          display: block; /* Ensure links are block-level and appear on new lines */
+          margin-top: 10px; /* Add spacing between links */
         }
       `}</style>
     </div>

@@ -17,6 +17,18 @@ const iconVariants = (duration) => ({
   },
 });
 
+const techs = [
+  { Icon: RiReactjsLine, name: "React", color: "text-cyan-400" },
+  { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
+  { Icon: SiPython, name: "Python", color: "text-yellow-500" },
+  { Icon: FaNodeJs, name: "Node", color: "text-green-500" },
+  { Icon: BiLogoPostgresql, name: "PostgreSQL", color: "text-sky-700" },
+  { Icon: FaAngular, name: "Angular", color: "text-red-600" },
+  { Icon: SiGithub, name: "GitHub", color: "text-purple-600" },
+  { Icon: SiPostman, name: "Postman", color: "text-orange-500" },
+  { Icon: SiFigma, name: "Figma", color: "text-white" },
+];
+
 const Technologies = () => {
   return (
     <div className="border-b border-neutral-800 pb-24">
@@ -34,78 +46,23 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="flex flex-wrap items-center justify-center gap-4"
       >
-        <motion.div
-          variants={iconVariants(2.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <RiReactjsLine className="text-7xl text-cyan-400" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiMongodb className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiPython className="text-7xl text-yellow-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaNodeJs className="text-7xl text-green-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <BiLogoPostgresql className="text-7xl text-sky-700" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <FaAngular className="text-7xl text-red-600" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiGithub className="text-7xl text-purple-600" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4.5)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiPostman className="text-7xl text-orange-500" />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className="rounded-2xl border-4 border-neutral-800 p-4"
-        >
-          <SiFigma className="text-7xl text-white" />
-        </motion.div>
+        {techs.map((tech, index) => (
+          <motion.div
+            key={index}
+            variants={iconVariants(2 + (index % 4))}
+            initial="initial"
+            animate="animate"
+            className="relative rounded-2xl border-4 border-neutral-800 p-4 flex items-center justify-center group"
+          >
+            <tech.Icon className={`text-7xl ${tech.color}`} />
+            <motion.div
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80 text-gray-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style={{ width: "100%", height: "100%" }}
+            >
+              <span className="text-xl"> {tech.name} </span>
+            </motion.div>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

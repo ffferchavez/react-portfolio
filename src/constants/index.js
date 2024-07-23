@@ -59,53 +59,53 @@ Active participation in the planning of new applications, whereby I can contribu
 
 export const PROJECTS = [
   {
-    title: "Meet App: Event Discovery PWA",
+    title: "Event Discovery Platform",
     image: project6,
     description:
-      "Meet is a Progressive Web App for event discovery and management, integrating with the Google Calendar API. Built with React and following TDD/BDD practices, it offers city-based event filtering, offline functionality, and data visualization. The app utilizes AWS Lambda and a serverless architecture for backend processes, ensuring scalable and secure performance. Installable on both desktop and mobile devices, Meet provides a seamless user experience across platforms.",
+      "Meet App: Meet is a Progressive Web App for event discovery and management, integrating with the Google Calendar API. Built with React and following TDD/BDD practices, it offers city-based event filtering, offline functionality, and data visualization. The app utilizes AWS Lambda and a serverless architecture for backend processes, ensuring scalable and secure performance. Installable on both desktop and mobile devices, Meet provides a seamless user experience across platforms.",
     technologies: ["React" , "PWA", "AWS Lambda", "Node.js", "Express.js", "MongoDB", "Jest", "Cucumber", "OAuth 2.0", "Recharts", "Service Workers"],
     githubLink: "https://github.com/ffferchavez/meet",
     projectUrl: "https://ffferchavez.github.io/meet/",
   },
   {
-    title: "Marvel Flix - Frontend",
+    title: "Film Catalog Viewer",
     image: project2,
     description:
-      "This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own movie lists.",
+      "Marvel-Flix (React-FrontEnd): This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own favorite movie lists and profiles.",
     technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js"],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
     caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
   },
   {
-    title: "Marvel Flix RESTful API",
+    title: "RESTful API",
     image: project1,
     description:
-      "This project is an API that serves as a backend for managing movie data. It includes endpoints for fetching movie details, searching for movies, and user authentication for managing favorites or ratings.",
+      "Marvel-Flix API: This project is an API that serves as a backend for managing movie data. It includes endpoints for fetching movie details, searching for movies, and user authentication for managing favorites or ratings.",
     technologies: ["Node.js", "Express.js", "MongoDB"],
     githubLink: "https://github.com/ffferchavez/movie-api",
     projectUrl: "https://github.com/ffferchavez/movie-api",
   },
   {
-    title: "Pokedex App",
+    title: "Pokémon Encyclopedia",
     image: project3,
     description:
-      "The Pokedex App is a web application that functions as a digital encyclopedia for Pokémon. It enables users to search and browse through different Pokémon species, view their characteristics, abilities, and stats, and save favorites.",
+      "Pokedex App: The Pokedex App is a web application that functions as a digital encyclopedia for Pokémon. It enables users to search and browse through different Pokémon species, view their characteristics, abilities, stats and save favorites.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PokeAPI"],
     githubLink: "https://github.com/ffferchavez/pokedex-app",
     projectUrl: "https://ffferchavez.github.io/pokedex-app/",
   },
   {
-    title: "Portfolio Website Version 1.0",
+    title: "Portfolio Website v1.0",
     image: project4,
     description:
-      "Portfolio Website is a showcase of my skills with Vanilla JavaScript, plain HTML and CSS. It includes sections like About Me, Skills, Projects, and Contact. It serves as a hub for potential employers or collaborators to learn more about my work and skills.",
+      "Portfolio Website is a showcase of my skills with Vanilla JavaScript, plain HTML and CSS. It includes sections About Me, Skills, Projects, and Contact Form. It serves as a hub for potential employers or collaborators to learn more about my work and skills.",
     technologies: ["HTML", "CSS", "Vanilla JavaScript"],
     githubLink: "https://github.com/ffferchavez/portfolio-website",
     projectUrl: "https://ffferchavez.github.io/portfolio-website/",
   },
   {
-    title: "Simple To-Do List App",
+    title: "To-Do List Application",
     image: project5,
     description:
       "The To-Do List App is a simple task management application. Users can create tasks, mark them as completed, and delete them. It may include later on features like task prioritization, due dates, and categories or labels for organizing tasks.",
