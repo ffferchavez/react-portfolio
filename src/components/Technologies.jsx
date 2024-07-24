@@ -41,14 +41,17 @@ const additionalTools = [
 
 const Technologies = () => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
+  const [linkClicked, setLinkClicked] = useState(false);
   const listRef = useRef(null);
 
   const toggleAdditionalTools = () => {
     setShowAdditionalTools(!showAdditionalTools);
+    setLinkClicked(true); // Mark link as clicked
   };
 
   const closeAdditionalTools = () => {
     setShowAdditionalTools(false);
+    setLinkClicked(false); // Unmark link as clicked
   };
 
   useEffect(() => {
@@ -101,8 +104,10 @@ const Technologies = () => {
       <div className="text-center mt-8">
         <motion.a
           onClick={toggleAdditionalTools}
-          className="text-white no-underline cursor-pointer block mt-4"
-          whileHover={{ color: "#48CAE4", scale: 1.05 }}
+          className={`text-white no-underline cursor-pointer block mt-4 ${
+            linkClicked ? "text-[#48CAE4]" : "hover:text-[#48CAE4]"
+          }`}
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
