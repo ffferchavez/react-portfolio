@@ -108,7 +108,7 @@ const Technologies = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          more of my toolbox
+          More Of My Toolbox
         </motion.a>
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
