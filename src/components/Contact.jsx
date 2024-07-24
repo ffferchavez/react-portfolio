@@ -33,9 +33,9 @@ const Contact = () => {
           href={`mailto:${CONTACT.email}`}
           className="email-link"
           whileHover={{ color: "#48CAE4" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
           {CONTACT.email}
         </motion.a>
@@ -43,9 +43,9 @@ const Contact = () => {
           href="src/constants/impressum.html"
           className="impressum-link"
           whileHover={{ color: "#48CAE4" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
         >
           Impressum
         </motion.a>
@@ -55,8 +55,8 @@ const Contact = () => {
         .email-link, .impressum-link {
           color: #FFFFFF;
           text-decoration: none;
-          display: block; /* Ensure links are block-level and appear on new lines */
-          margin-top: 10px; /* Add spacing between links */
+          display: block;
+          margin-top: 10px;
         }
       `}</style>
     </div>

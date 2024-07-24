@@ -101,11 +101,12 @@ const Technologies = () => {
       <div className="text-center mt-8">
         <motion.a
           onClick={toggleAdditionalTools}
-          style={{ color: '#FFFFFF', textDecoration: 'none', cursor: 'pointer', display: 'block', marginTop: '10px' }}
-          whileHover={{ color: "#48CAE4" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          className="text-white no-underline cursor-pointer block mt-4"
+          whileHover={{ color: "#48CAE4", scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.5 }}
         >
           more of my toolbox
         </motion.a>
