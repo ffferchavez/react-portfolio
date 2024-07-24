@@ -1,6 +1,6 @@
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
-import cvPdf from "../assets/chavez-resume.pdf";
+import cvPdf from "../assets/manuel-fernando-resume.pdf";
 
 const Experience = () => {
   return (

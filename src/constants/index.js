@@ -82,7 +82,7 @@ export const PROJECTS = [
     image: project1,
     description:
       "Marvel-Flix API: This project is an API that serves as a backend for managing movie data. It includes endpoints for fetching movie details, searching for movies, and user authentication for managing favorites or ratings.",
-    technologies: ["Node.js", "Express.js", "MongoDB"],
+    technologies: ["Node.js", "Express.js", "MongoDB", "Heroku", "Postman"],
     githubLink: "https://github.com/ffferchavez/movie-api",
     projectUrl: "https://github.com/ffferchavez/movie-api",
   },
