@@ -139,5 +139,5 @@ export const PROJECTS = [
 export const CONTACT = {
   address: "Kleve, Germany",
   phoneNo: "+49 152 217 95849 ",
-  email: "ffferchavez@gmail.com",
+  email: "manuel.fernando.info@gmail.com",
 };
