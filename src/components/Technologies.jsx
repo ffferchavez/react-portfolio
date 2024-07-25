@@ -93,7 +93,7 @@ const Technologies = () => {
           >
             <tech.Icon className={`text-7xl ${tech.color}`} />
             <motion.div
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80 text-gray-100 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80 text-gray-300 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               style={{ width: "100%", height: "100%" }}
             >
               <span className="text-xl"> {tech.name} </span>
@@ -104,7 +104,7 @@ const Technologies = () => {
       <div className="text-center mt-8">
         <motion.a
           onClick={toggleAdditionalTools}
-          className={`text-white no-underline cursor-pointer block mt-4 ${
+          className={`text-gray-350 no-underline cursor-pointer block mt-4 ${
             linkClicked ? "text-[#48CAE4]" : "hover:text-[#48CAE4]"
           }`}
           whileHover={{ scale: 1.05 }}
@@ -131,7 +131,7 @@ const Technologies = () => {
               >
                 &times;
               </button>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {additionalTools.map((tool, index) => (
                   <div key={index} className="col-span-1">{tool}</div>
                 ))}

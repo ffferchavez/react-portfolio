@@ -53,7 +53,7 @@ const Contact = () => {
 
       <style>{`
         .email-link, .impressum-link {
-          color: #FFFFFF;
+          color: lightgray;
           text-decoration: none;
           display: block;
           margin-top: 10px;

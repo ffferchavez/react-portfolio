@@ -34,7 +34,7 @@ const Projects = () => {
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-gray-300 mt-2 email-link"
+                className="text-sm text-gray-400 mt-2 mb-2 email-link"
                 whileHover={{ color: "#00B4D8" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -68,7 +68,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-200 hover:bg-gray-400 text-gray-700 py-1 px-1 rounded-sm inline-block transition duration-300 text-sm"
-                  style={{ fontSize: '0.7rem', opacity: 0.3 }}
+                  style={{ fontSize: '0.7rem', opacity: 0.6 }}
                 >
                   Github Code
                 </a>
@@ -78,7 +78,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="ml-4 bg-gray-200 hover:bg-gray-400 text-gray-700 py-1 px-1 rounded-sm inline-block transition duration-300 text-sm"
-                    style={{ fontSize: '0.7rem', opacity: 0.3 }}
+                    style={{ fontSize: '0.7rem', opacity: 0.6 }}
                   >
                     Case Study
                   </a>

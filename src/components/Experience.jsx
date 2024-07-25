@@ -32,7 +32,7 @@ const Experience = () => {
             >
               <h6 className="mb-2 font-semibold">
                 {experience.role} -{" "}
-                <span className="text-sm text-purple-100">
+                <span className="text-sm" style={{ color: 'hsl(191, 88%, 88%)' }}>
                   {experience.company}
                 </span>
               </h6>
@@ -61,14 +61,14 @@ const Experience = () => {
         <a
           href={cvPdf}
           download
-          className="text-white no-underline"
-          style={{ textDecoration: "none", color: "#FFFFFF", transition: "color 0.3s ease" }}
+          className="text-gray-200 no-underline"
+          style={{ textDecoration: "none", transition: "color 0.3s ease" }}
         >
           Resume Download
         </a>
         <style>
           {`
-            .text-white:hover {
+            .text-gray-200:hover {
               color: #48CAE4 !important;
             }
           `}

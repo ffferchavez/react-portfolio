@@ -1,15 +1,15 @@
 import logo from "../assets/mfLogo.png";
-import { FaLinkedin, FaGithub, FaTwitter, FaMedium } from "react-icons/fa"; // Added FaMedium
+import { FaLinkedin, FaGithub, FaTwitter, FaMedium } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="mb-20 flex items-center justify-between py-6">
       <div className="flex flex-shrink-0 items-center">
-        <a href="https://manuel-fernando.netlify.app/" target="_blank" rel="noopener noreferrer">
+        <a href="https://manuel-fernando.com/" target="_blank" rel="noopener noreferrer">
           <img className="mx-2 w-8 cursor-pointer" src={logo} alt="logo" style={{ borderRadius: "5px" }} />
         </a>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="m-8 flex items-center justify-center gap-3 text-2xl">
         <a href="https://www.linkedin.com/in/ffferchavez" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
