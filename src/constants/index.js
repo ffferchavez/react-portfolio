@@ -4,6 +4,8 @@ import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 import project5 from "../assets/projects/project-5.png";
 import project6 from "../assets/projects/project-6.png";
+import project7 from "../assets/projects/project-7.png";
+import project8 from "../assets/projects/project-8.png";
 
 export const HERO_CONTENT = 
 `Full Stack Web Developer with more than a decade of Mechatronics experience, skilled in building
@@ -59,6 +61,26 @@ Active participation in the planning of new applications, whereby I can contribu
 
 export const PROJECTS = [
   {
+    title: "Film Catalog Viewer 2",
+    image: project7,
+    description:
+      "myFlix (Angular FrontEnd): This project is a front-end application designed to interface with an existing movie database API. Built using Angular, it allows users to explore a wide range of movies, view detailed information about each film, director, and genre, and manage their profiles and favorite movie lists. The app features a responsive design and leverages Angular Material for a modern and intuitive user experience.",
+    technologies: ["Angular", "Angular Material", "Node.js", "TypeDoc", "Angular CLI", "MongoDB"],
+    githubLink: "https://github.com/ffferchavez/myFlix-Angular",
+    projectUrl: "ffferchavez.github.io/myFlix-Angular/",
+  },
+
+  {
+    title: "Chat Application",
+    image: project8,
+    description:
+      "ChatMate (React Native Mobile App): ChatMate is a cross-platform mobile chat application built with React Native and Expo. It provides a smooth chat experience with text messaging, image sharing, and real-time location updates. Users can join chat rooms, send photos, and share their location. Conversations are stored online in Google Firestore and locally for offline access. Firebase is used for anonymous authentication, and the app includes accessibility features for diverse users.",
+    technologies: ["React Native", "Expo", "Xcode", "Android Studio", "Firestore", "Firebase", "AsyncStorage"],
+    githubLink: "https://github.com/ffferchavez/chatmate",
+    projectUrl: "https://github.com/ffferchavez/chatmate",
+  },
+
+  {
     title: "Event Discovery Platform",
     image: project6,
     description:
@@ -68,10 +90,10 @@ export const PROJECTS = [
     projectUrl: "https://ffferchavez.github.io/meet/",
   },
   {
-    title: "Film Catalog Viewer",
+    title: "Film Catalog Viewer 1",
     image: project2,
     description:
-      "Marvel-Flix (React-FrontEnd): This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own favorite movie lists and profiles.",
+      "Marvel-Flix (React FrontEnd): This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own favorite movie lists and profiles.",
     technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js"],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
@@ -113,27 +135,6 @@ export const PROJECTS = [
     githubLink: "https://github.com/ffferchavez/portfolio-website",
     projectUrl: "https://ffferchavez.github.io/to-do-list-app/",
   },
-  
- /* 
-  {
-    title: "Marvel Flix - Angular,
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    githubLink: "https://github.com/ffferchavez/portfolio-website",
-    projectUrl: "https://ffferchavez.github.io/to-do-list-app/",
-  },
-  {
-    title: "Chat App - React Native",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    githubLink: "https://github.com/ffferchavez/portfolio-website",
-    projectUrl: "https://ffferchavez.github.io/to-do-list-app/",
-  },
-  */
 ];
 
 export const CONTACT = {

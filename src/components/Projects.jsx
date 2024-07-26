@@ -24,8 +24,8 @@ const Projects = () => {
               <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="block">
                 <img
                   src={project.image}
-                  width={150}
-                  height={150}
+                  width={200}
+                  height={200}
                   alt={project.title}
                   className="mb-2 rounded transform transition-transform duration-300 hover:scale-105"
                 />
