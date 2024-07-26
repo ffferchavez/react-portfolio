@@ -31,11 +31,11 @@ const techs = [
 ];
 
 const additionalTools = [
-  "React Native", "Angular Material", "ExpressJS",
+  "React Native", "Angular Material", "TypeScript","ExpressJS",
   "Bootstrap", "Sass", "JQuery", "Heroku",
   "Netlify", "AWS Lambda", "OAuth 2.0", "Recharts",
   "Jest", "Cucumber", "Puppeteer", "PWA", "TDD", "BDD",
-  "OOP", "Gherkin", "Django", "Docker", "Firebase", "AI", "Trello",
+  "OOP", "Gherkin", "Django", "Firebase", "AI", "Trello",
   "Jira", "Canva", "Xcode", "Android Studio", "Scrum", "Kanban"
 ];
 
