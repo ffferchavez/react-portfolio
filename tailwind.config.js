@@ -5,8 +5,12 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'light-gradient': 'radial-gradient(circle 100% 50% at 50% 0%, rgba(0,163,255,0.13) 0%, rgba(0,163,255,0) 50%, rgba(0,163,255,0) 100%)',
-        'dark-gradient': 'radial-gradient(circle 500px at 50% 200px, #3e3e3e, transparent)',
+        'light-gradient': 'linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)',
+        'light-radial': 'radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)',
+        'dark-radial': 'radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)',
+      },
+      backgroundSize: {
+        'light-size': '6rem 4rem',
       },
       colors: {
         darkBackground: '#1e1e1e', // Dark background
@@ -15,7 +19,6 @@ export default {
         lightText: '#333333', // Dark text color for light mode
         borderDark: '#3e3e3e', // Border color for dark mode
         borderLight: '#e0e0e0', // Border color for light mode
-        // Add more colors if needed
       },
     },
   },

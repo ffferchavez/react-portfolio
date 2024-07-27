@@ -31,7 +31,7 @@ const techs = [
 ];
 
 const additionalTools = [
-  "React Native", "Angular Material", "TypeScript","ExpressJS",
+  "React Native", "Angular Material", "TypeScript", "ExpressJS",
   "Bootstrap", "Sass", "JQuery", "Heroku",
   "Netlify", "AWS Lambda", "OAuth 2.0", "Recharts",
   "Jest", "Cucumber", "Puppeteer", "PWA", "TDD", "BDD",
@@ -41,17 +41,14 @@ const additionalTools = [
 
 const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
-  const [linkClicked, setLinkClicked] = useState(false);
   const listRef = useRef(null);
 
   const toggleAdditionalTools = () => {
     setShowAdditionalTools(!showAdditionalTools);
-    setLinkClicked(true); // Mark link as clicked
   };
 
   const closeAdditionalTools = () => {
     setShowAdditionalTools(false);
-    setLinkClicked(false); // Unmark link as clicked
   };
 
   useEffect(() => {
@@ -89,7 +86,7 @@ const Technologies = ({ isDarkMode }) => {
             variants={iconVariants(2 + (index % 4))}
             initial="initial"
             animate="animate"
-            className={`relative rounded-2xl border-4 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'} p-4 flex items-center justify-center group`}
+            className={`relative mb-4 rounded-2xl border-4 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'} p-4 flex items-center justify-center group`}
           >
             <tech.Icon className={`text-7xl ${tech.color}`} />
             <motion.div
@@ -102,7 +99,7 @@ const Technologies = ({ isDarkMode }) => {
         ))}
       </motion.div>
       <div className="text-center mt-8">
-        <motion.a
+        <motion.div
           onClick={toggleAdditionalTools}
           className={`no-underline cursor-pointer block mt-4 ${isDarkMode ? 'text-darkText hover:text-[#48CAE4]' : 'text-lightText hover:text-[#48CAE4]'}`}
           whileHover={{ scale: 1.05 }}
@@ -112,7 +109,7 @@ const Technologies = ({ isDarkMode }) => {
           transition={{ duration: 1.5 }}
         >
           See More Technologies Here
-        </motion.a>
+        </motion.div>
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
             <motion.div

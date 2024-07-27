@@ -14,10 +14,10 @@ Combines technical precision and innovative problem-solving to optimize performa
 user experiences.`;
 
 export const ABOUT_TEXT = 
-`<p>Hi, I’m a Full Stack Web Developer transitioning from more than a decade in Mechatronics. This unique journey has shaped me into a developer who blends technical precision with innovative problem-solving.</p>
-<p>I build responsive, efficient applications using modern technologies and frameworks, always prioritizing user experience. My engineering background gives me a strong analytical foundation, enabling me to tackle complex challenges methodically.</p>
-<p>Additionally, my curiosity and passion for learning drive me to explore new technologies and creative solutions. I’m eager to join a forward-thinking tech company where I can leverage my diverse skill set, bring fresh perspectives, and contribute to impactful projects.</p>
-<p>I’m not just changing careers – I’m evolving my professional identity to merge the best of both worlds.</p>`;
+`<p style="margin-bottom: 12px;">Hi, I’m a Full Stack Web Developer transitioning from more than a decade in Mechatronics. This unique journey has shaped me into a developer who blends technical precision with innovative problem-solving.</p>
+<p style="margin-bottom: 12px;">I build responsive, efficient applications using modern technologies and frameworks, always prioritizing user experience. My engineering background gives me a strong analytical foundation, enabling me to tackle complex challenges methodically.</p>
+<p style="margin-bottom: 12px;">Additionally, my curiosity and passion for learning drive me to explore new technologies and creative solutions. I’m eager to join a forward-thinking tech company where I can leverage my diverse skill set, bring fresh perspectives, and contribute to impactful projects.</p>
+<p style="margin-bottom: 12px;">I’m not just changing careers – I’m evolving my professional identity to merge the best of both worlds.</p>`;
 
 export const EXPERIENCES = [
   {

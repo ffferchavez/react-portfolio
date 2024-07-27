@@ -2,6 +2,7 @@ import React from 'react';
 import aboutImg from "../assets/mfAbout.jpg";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
+import '../index.css';
 
 const About = ({ isDarkMode }) => {
   return (
@@ -15,7 +16,7 @@ const About = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center"
+          className="w-full lg:w-1/2 lg:p-8 mb-10 flex items-center justify-center"
           style={{ height: '500px' }}
         >
           <div className={`rounded-2xl overflow-hidden filter grayscale-[50%] brightness-85 ${isDarkMode ? 'bg-darkBackground' : 'bg-lightBackground'}`} style={{ width: '500px', height: '500px' }}>
@@ -35,8 +36,8 @@ const About = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
           className="w-full lg:w-1/2"
         >
-          <div className={`flex justify-center lg:justify-start ${isDarkMode ? 'text-neutral-300' : 'text-neutral-800'}`}>
-            <div className="my-2 max-w-xl" dangerouslySetInnerHTML={{ __html: ABOUT_TEXT }} />
+          <div className={`about-text flex justify-center lg:justify-start ${isDarkMode ? 'text-neutral-300' : 'text-neutral-800'}`}>
+            <div className="mb-8 max-w-xl" dangerouslySetInnerHTML={{ __html: ABOUT_TEXT }} />
           </div>
         </motion.div>
       </div>

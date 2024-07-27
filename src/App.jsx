@@ -24,9 +24,15 @@ const App = () => {
 
   return (
     <div className={`overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-300 selection:text-cyan-900 ${isDarkMode ? 'dark' : ''}`}>
-      <div className={`fixed top-0 -z-10 h-full w-full ${isDarkMode ? 'bg-darkBackground' : 'bg-lightBackground'}`}>
-        <div className={`relative h-full w-full ${isDarkMode ? 'bg-slate-950' : 'bg-gray-200'}`}>
-          <div className={`absolute bottom-0 left-0 right-0 top-0 ${isDarkMode ? 'bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]' : 'bg-[radial-gradient(circle_500px_at_50%_0%,rgba(0,163,255,0.13)_0%,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]'}`}></div>
+      <div className={`fixed inset-0 -z-10 h-full w-full`}>
+        <div className={`relative h-full w-full ${isDarkMode ? 'bg-slate-950' : 'bg-white'}`}>
+          {isDarkMode ? (
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]"></div>
+          ) : (
+            <div className="absolute inset-0 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#C9EBFF,transparent)]"></div>
+            </div>
+          )}
         </div>
       </div>
 
