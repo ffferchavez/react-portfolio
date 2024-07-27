@@ -61,26 +61,6 @@ Active participation in the planning of new applications, whereby I can contribu
 
 export const PROJECTS = [
   {
-    title: "Film Catalog Viewer 2",
-    image: project7,
-    description:
-      "myFlix (Angular FrontEnd): This project is a front-end application designed to interface with an existing movie database API. Built using Angular, it allows users to explore a wide range of movies, view detailed information about each film, director, and genre, and manage their profiles and favorite movie lists. The app features a responsive design and leverages Angular Material for a modern and intuitive user experience.",
-    technologies: ["Angular", "Angular Material", "TypeScript", "Node.js", "TypeDoc", "Angular CLI", "MongoDB"],
-    githubLink: "https://github.com/ffferchavez/myFlix-Angular",
-    projectUrl: "ffferchavez.github.io/myFlix-Angular/",
-  },
-
-  {
-    title: "Chat Application",
-    image: project8,
-    description:
-      "ChatMate (React Native Mobile App): ChatMate is a cross-platform mobile chat application built with React Native and Expo. It provides a smooth chat experience with text messaging, image sharing, and real-time location updates. Users can join chat rooms, send photos, and share their location. Conversations are stored online in Google Firestore and locally for offline access. Firebase is used for anonymous authentication, and the app includes accessibility features for diverse users.",
-    technologies: ["React Native", "Expo", "Xcode", "Android Studio", "Firestore", "Firebase", "AsyncStorage"],
-    githubLink: "https://github.com/ffferchavez/chatmate",
-    projectUrl: "https://github.com/ffferchavez/chatmate",
-  },
-
-  {
     title: "Event Discovery Platform",
     image: project6,
     description:
@@ -99,6 +79,27 @@ export const PROJECTS = [
     projectUrl: "https://marvel-flix-app.netlify.app/",
     caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
   },
+
+  {
+    title: "Chat Application",
+    image: project8,
+    description:
+      "ChatMate (React Native Mobile App): ChatMate is a cross-platform mobile chat application built with React Native and Expo. It provides a smooth chat experience with text messaging, image sharing, and real-time location updates. Users can join chat rooms, send photos, and share their location. Conversations are stored online in Google Firestore and locally for offline access. Firebase is used for anonymous authentication, and the app includes accessibility features for diverse users.",
+    technologies: ["React Native", "Expo", "Xcode", "Android Studio", "Firestore", "Firebase", "AsyncStorage"],
+    githubLink: "https://github.com/ffferchavez/chatmate",
+    projectUrl: "https://github.com/ffferchavez/chatmate",
+  },
+
+  {
+    title: "Film Catalog Viewer 2",
+    image: project7,
+    description:
+      "myFlix (Angular FrontEnd): This project is a front-end application designed to interface with an existing movie database API. Built using Angular, it allows users to explore a wide range of movies, view detailed information about each film, director, and genre, and manage their profiles and favorite movie lists. The app features a responsive design and leverages Angular Material for a modern and intuitive user experience.",
+    technologies: ["Angular", "Angular Material", "TypeScript", "Node.js", "TypeDoc", "Angular CLI", "MongoDB"],
+    githubLink: "https://github.com/ffferchavez/myFlix-Angular",
+    projectUrl: "ffferchavez.github.io/myFlix-Angular/",
+  },
+
   {
     title: "RESTful API",
     image: project1,
