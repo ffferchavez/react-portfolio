@@ -39,7 +39,7 @@ const additionalTools = [
   "Jira", "Canva", "Xcode", "Android Studio", "Scrum", "Kanban"
 ];
 
-const Technologies = () => {
+const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
   const [linkClicked, setLinkClicked] = useState(false);
   const listRef = useRef(null);
@@ -68,12 +68,12 @@ const Technologies = () => {
   }, []);
 
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <div className={`border-b pb-24 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'}`}>
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className="my-20 text-center text-4xl"
+        className={`my-20 text-center text-4xl ${isDarkMode ? 'text-darkText' : 'text-lightText'}`}
       >
         Technologies
       </motion.h2>
@@ -89,14 +89,14 @@ const Technologies = () => {
             variants={iconVariants(2 + (index % 4))}
             initial="initial"
             animate="animate"
-            className="relative rounded-2xl border-4 border-neutral-800 p-4 flex items-center justify-center group"
+            className={`relative rounded-2xl border-4 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'} p-4 flex items-center justify-center group`}
           >
             <tech.Icon className={`text-7xl ${tech.color}`} />
             <motion.div
-              className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-80 text-gray-300 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              className={`absolute inset-0 flex items-center justify-center ${isDarkMode ? 'bg-black bg-opacity-80 text-gray-300' : 'bg-gray-300 bg-opacity-80 text-gray-800'} rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               style={{ width: "100%", height: "100%" }}
             >
-              <span className="text-xl"> {tech.name} </span>
+              <span className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}> {tech.name} </span>
             </motion.div>
           </motion.div>
         ))}
@@ -104,9 +104,7 @@ const Technologies = () => {
       <div className="text-center mt-8">
         <motion.a
           onClick={toggleAdditionalTools}
-          className={`text-gray-350 no-underline cursor-pointer block mt-4 ${
-            linkClicked ? "text-[#48CAE4]" : "hover:text-[#48CAE4]"
-          }`}
+          className={`no-underline cursor-pointer block mt-4 ${isDarkMode ? 'text-darkText hover:text-[#48CAE4]' : 'text-lightText hover:text-[#48CAE4]'}`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 100 }}
@@ -118,22 +116,21 @@ const Technologies = () => {
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
             <motion.div
-              className="relative mt-4 text-center p-6 rounded shadow-lg"
-              style={{ backgroundColor: 'rgba(35, 35, 35, 0.3)' }}
+              className={`relative mt-4 text-center p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <button
                 onClick={closeAdditionalTools}
-                className="absolute top-2 right-2 text-gray-400"
+                className={`absolute top-2 right-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
                 style={{ cursor: 'pointer' }}
               >
                 &times;
               </button>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {additionalTools.map((tool, index) => (
-                  <div key={index} className="col-span-1">{tool}</div>
+                  <div key={index} className={`col-span-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>{tool}</div>
                 ))}
               </div>
             </motion.div>

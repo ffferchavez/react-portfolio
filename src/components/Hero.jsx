@@ -1,3 +1,4 @@
+import React from 'react';
 import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/mfProfile1.jpg";
 import { motion } from "framer-motion";
@@ -13,7 +14,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-36">
+    <div className="border-b pb-4 lg:mb-36 dark:border-neutral-900">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -21,7 +22,7 @@ const Hero = () => {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-7xl"
+              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-7xl dark:text-darkText text-lightText"
             >
               Manuel Fernando
             </motion.h2>
@@ -43,7 +44,7 @@ const Hero = () => {
               variants={container(1)}
               initial="hidden"
               animate="visible"
-              className="my-2 max-w-xl py-6 font-light tracking-tighter"
+              className="my-2 max-w-xl py-6 font-light tracking-tighter dark:text-darkText text-lightText"
             >
               {HERO_CONTENT}
             </motion.p>
