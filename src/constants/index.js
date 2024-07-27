@@ -79,7 +79,6 @@ export const PROJECTS = [
     projectUrl: "https://marvel-flix-app.netlify.app/",
     caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
   },
-
   {
     title: "Chat Application",
     image: project8,
@@ -99,7 +98,6 @@ export const PROJECTS = [
     githubLink: "https://github.com/ffferchavez/myFlix-Angular",
     projectUrl: "ffferchavez.github.io/myFlix-Angular/",
   },
-
   {
     title: "RESTful API",
     image: project1,
