@@ -50,7 +50,7 @@ const additionalTools = {
     "Heroku", "Netlify", "AWS", "Firebase", "Github Pages",
   ],
   "Authentication & Security": [
-    "OAuth 2.0", "SON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS",
+    "OAuth 2.0", "JSON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS",
   ],
   "Testing": [
     "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
