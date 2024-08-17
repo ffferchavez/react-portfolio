@@ -54,18 +54,18 @@ const additionalTools = {
   ],
   "Testing": [
     "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
-    "Unit Testing","E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "User Features & Stories"
+    "Unit Testing","E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "Features & User Stories"
   ],
   "Development Concepts/Methodologies": [
-    "Agile Development", "Clean Code", "DRY Code", "PWA", "SPA", "B2B", "Scrum", "Kanban", "MVT", "MCT",
+    "Agile Development", "Clean Code", "DRY Code", "Progressive Web App (PWA)", "Single Page App (SPA)", "CRUD", "SCRUM", "Kanban", "MVT", "MCT",
     "Serverless Architecture", "Documentation Practices",
   ],
   "Documentation Tools": [
   "JSDoc", "TSDoc",
   ],
   "DevOps/Environment Management": [
-    "CI/CD pipelines", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
-    "pip",
+    "CI/CD", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
+    "pip", "ng",
   ],
   "Development Tools/Environments": [
     "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman",
@@ -74,7 +74,7 @@ const additionalTools = {
     "Trello", "Jira(Atlassian)", "Canva", "Figma", "Sketch", "Blender",
   ],
   "Artificial Intelligence": [
-    "AI Smart Prompts", "ChatGPT", "Matplotlib",
+    "AI Prompts", "ChatGPT", "Matplotlib",
   ],
 };
 
