@@ -31,17 +31,17 @@ const techs = [
 ];
 
 const additionalTools = {
+  "Programming Languages & Paradigms": [
+    "JavaScript","TypeScript", "Python", "C", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
+  ],
   "Frontend Development": [
     "React", "React Native", "React Router", "React-Bootstrap", "Angular", "Angular Material", "VueJS",
     "Vuetify",
     "Bootstrap", "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Tailwind CSS",
     "Context API",
   ],
-  "Programming Languages & Paradigms": [
-    "JavaScript","TypeScript", "Python", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
-  ],
   "Backend Development": [
-    "NodeJS", "ExpressJS", "Django", "AWS Lambda", "RESTful API", "JSON", "XML", "Object-Relational Mappers (ORMs)"
+    "NodeJS", "ExpressJS", "Django", "AWS Lambda", "RESTful API", "JSON", "XML", "Object-Relational Mappers (ORMs)", "Matplotlib",
   ],
   "Databases": [
     "MongoDB", "PostgreSQL", "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
@@ -68,13 +68,10 @@ const additionalTools = {
     "pip", "ng",
   ],
   "Development Tools/Environments": [
-    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman",
+    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman", "Matlab",
   ],
   "Project Management & Design Tools": [
-    "Trello", "Jira(Atlassian)", "Canva", "Figma", "Sketch", "Blender",
-  ],
-  "Artificial Intelligence": [
-    "AI Prompts", "ChatGPT", "Matplotlib",
+    "Trello", "Jira(Atlassian)", "Canva", "Figma", "Sketch", "Blender", "AI",
   ],
 };
 
