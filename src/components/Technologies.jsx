@@ -30,46 +30,49 @@ const techs = [
   { Icon: SiFigma, name: "Figma", color: "text-white" },
 ];
 
-const additionalTools = [
-  // Frontend Development
-  "React Native", "React Router", "React-Bootstrap", "Angular Material", 
-  "Bootstrap", "HTML", "CSS", "SCSS", "JavaScript", "JQuery", "Recharts",
-
-  // Programming Languages & Paradigms
-  "TypeScript", "OOP", "FP",
-
-  // Backend Development
-  "ExpressJS", "Django",
-
-  // Databases
-  "MySQL", "SQLite", "SQLAlchemy",
-
-  // Hosting/Cloud Services
-  "Heroku", "Netlify", "AWS Lambda", "Firebase",
-
-  // Authentication & Security
-  "OAuth 2.0", "JWT",
-
-  // Testing
-  "Jest", "Cucumber", "Puppeteer", "TDD", "BDD", "E2E", "Gherkin",
-
-  // Development Concepts/Methodologies
-  "PWA", "B2B", "Scrum", "Kanban", "MVT", "MCT",
-
-  // DevOps/Environment Management
-  "Docker", "zsh", "PowerShell",
-
-  // Development Tools/Environments
-  "Xcode", "Android Studio",
-
-  // Project Management & Design Tools
-  "Trello", "Jira", "Canva",
-
-  // Artificial Intelligence
-  "AI"
-];
-
-
+const additionalTools = {
+  "Frontend Development": [
+    "VueJS", "React Native", "React Router", "React-Bootstrap", "Angular Material", 
+    "Bootstrap", "HTML", "CSS", "SCSS", "JavaScript", "JQuery", "Recharts", "Redux", "Tailwind CSS",
+    "Context API",
+  ],
+  "Programming Languages & Paradigms": [
+    "TypeScript", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
+  ],
+  "Backend Development": [
+    "ExpressJS", "Django", "AWS Lambda",
+  ],
+  "Databases": [
+    "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
+  ],
+  "Hosting/Cloud Services": [
+    "Heroku", "Netlify", "AWS", "Firebase",
+  ],
+  "Authentication & Security": [
+    "OAuth 2.0", "SON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS",
+  ],
+  "Testing": [
+    "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
+    "Unit Testing","E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "User Features & Stories"
+  ],
+  "Development Concepts/Methodologies": [
+    "Agile Development", "Clean Code", "DRY Code", "PWA", "SPA", "B2B", "Scrum", "Kanban", "MVT", "MCT",
+    "Serverless Architecture", 
+  ],
+  "DevOps/Environment Management": [
+    "CI/CD pipelines", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
+    "pip",
+  ],
+  "Development Tools/Environments": [
+    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox"
+  ],
+  "Project Management & Design Tools": [
+    "Trello", "Jira(Atlassian)", "Canva", "Sketch", "Blender",
+  ],
+  "Artificial Intelligence": [
+    "AI Prompts",
+  ],
+};
 
 const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
@@ -145,7 +148,7 @@ const Technologies = ({ isDarkMode }) => {
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
             <motion.div
-              className={`relative mt-4 text-center p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
+              className={`relative mt-4 text-left p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -157,9 +160,14 @@ const Technologies = ({ isDarkMode }) => {
               >
                 &times;
               </button>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                {additionalTools.map((tool, index) => (
-                  <div key={index} className={`col-span-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>{tool}</div>
+              <div className="space-y-4">
+                {Object.entries(additionalTools).map(([category, tools], index) => (
+                  <div key={index}>
+                    <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>{category}</h3>
+                    <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {tools.join(", ")}
+                    </p>
+                  </div>
                 ))}
               </div>
             </motion.div>
