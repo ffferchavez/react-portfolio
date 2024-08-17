@@ -32,21 +32,22 @@ const techs = [
 
 const additionalTools = {
   "Frontend Development": [
-    "VueJS", "React Native", "React Router", "React-Bootstrap", "Angular Material", 
-    "Bootstrap", "HTML", "CSS", "SCSS", "JavaScript", "JQuery", "Recharts", "Redux", "Tailwind CSS",
+    "React", "React Native", "React Router", "React-Bootstrap", "Angular", "Angular Material", "VueJS",
+    "Vuetify",
+    "Bootstrap", "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Tailwind CSS",
     "Context API",
   ],
   "Programming Languages & Paradigms": [
-    "TypeScript", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
+    "JavaScript","TypeScript", "Python", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
   ],
   "Backend Development": [
-    "ExpressJS", "Django", "AWS Lambda",
+    "NodeJS", "ExpressJS", "Django", "AWS Lambda", "RESTful API", "JSON", "XML", "Object-Relational Mappers (ORMs)"
   ],
   "Databases": [
-    "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
+    "MongoDB", "PostgreSQL", "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
   ],
   "Hosting/Cloud Services": [
-    "Heroku", "Netlify", "AWS", "Firebase",
+    "Heroku", "Netlify", "AWS", "Firebase", "Github Pages",
   ],
   "Authentication & Security": [
     "OAuth 2.0", "SON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS",
@@ -57,20 +58,23 @@ const additionalTools = {
   ],
   "Development Concepts/Methodologies": [
     "Agile Development", "Clean Code", "DRY Code", "PWA", "SPA", "B2B", "Scrum", "Kanban", "MVT", "MCT",
-    "Serverless Architecture", 
+    "Serverless Architecture", "Documentation Practices",
+  ],
+  "Documentation Tools": [
+  "JSDoc", "TSDoc",
   ],
   "DevOps/Environment Management": [
     "CI/CD pipelines", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
     "pip",
   ],
   "Development Tools/Environments": [
-    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox"
+    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman",
   ],
   "Project Management & Design Tools": [
-    "Trello", "Jira(Atlassian)", "Canva", "Sketch", "Blender",
+    "Trello", "Jira(Atlassian)", "Canva", "Figma", "Sketch", "Blender",
   ],
   "Artificial Intelligence": [
-    "AI Prompts",
+    "AI Smart Prompts", "ChatGPT", "Matplotlib",
   ],
 };
 
@@ -143,7 +147,7 @@ const Technologies = ({ isDarkMode }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          See More Technologies Here
+          See All My Technologies Here
         </motion.div>
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
