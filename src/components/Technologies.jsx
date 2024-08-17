@@ -31,13 +31,45 @@ const techs = [
 ];
 
 const additionalTools = [
-  "React Native", "Angular Material", "TypeScript", "ExpressJS",
-  "Bootstrap", "Sass", "JQuery", "Heroku",
-  "Netlify", "AWS Lambda", "OAuth 2.0", "Recharts",
-  "Jest", "Cucumber", "Puppeteer", "PWA", "TDD", "BDD",
-  "OOP", "Gherkin", "Django", "Firebase", "AI", "Trello",
-  "Jira", "Canva", "Xcode", "Android Studio", "Scrum", "Kanban"
+  // Frontend Development
+  "React Native", "React Router", "React-Bootstrap", "Angular Material", 
+  "Bootstrap", "HTML", "CSS", "SCSS", "JavaScript", "JQuery", "Recharts",
+
+  // Programming Languages & Paradigms
+  "TypeScript", "OOP", "FP",
+
+  // Backend Development
+  "ExpressJS", "Django",
+
+  // Databases
+  "MySQL", "SQLite", "SQLAlchemy",
+
+  // Hosting/Cloud Services
+  "Heroku", "Netlify", "AWS Lambda", "Firebase",
+
+  // Authentication & Security
+  "OAuth 2.0", "JWT",
+
+  // Testing
+  "Jest", "Cucumber", "Puppeteer", "TDD", "BDD", "E2E", "Gherkin",
+
+  // Development Concepts/Methodologies
+  "PWA", "B2B", "Scrum", "Kanban", "MVT", "MCT",
+
+  // DevOps/Environment Management
+  "Docker", "zsh", "PowerShell",
+
+  // Development Tools/Environments
+  "Xcode", "Android Studio",
+
+  // Project Management & Design Tools
+  "Trello", "Jira", "Canva",
+
+  // Artificial Intelligence
+  "AI"
 ];
+
+
 
 const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);

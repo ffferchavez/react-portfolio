@@ -6,6 +6,7 @@ import project5 from "../assets/projects/project-5.png";
 import project6 from "../assets/projects/project-6.png";
 import project7 from "../assets/projects/project-7.png";
 import project8 from "../assets/projects/project-8.png";
+import project9 from "../assets/projects/project-9.png";
 
 export const HERO_CONTENT = 
 `Full Stack Web Developer with more than a decade of Mechatronics experience, skilled in building
@@ -68,6 +69,15 @@ export const PROJECTS = [
     technologies: ["React" , "PWA", "AWS Lambda", "Node.js", "Express.js", "MongoDB", "Jest", "Cucumber", "OAuth 2.0", "Recharts", "Service Workers"],
     githubLink: "https://github.com/ffferchavez/meet",
     projectUrl: "https://ffferchavez.github.io/meet/",
+  },
+  {
+    title: "Recipes Management",
+    image: project9,
+    description:
+      "DishDesign: A dynamic and user-friendly Recipe Management Web Application built with Python and Django. DishDesign allows users to create, manage, and search for recipes based on ingredients, cooking time, and difficulty. Featuring an admin panel for efficient data management, the app also provides statistical dashboards using data analytics and visualization techniques. Deployed on Heroku with PostgreSQL, DishDesign showcases a seamless blend of backend and frontend development with a focus on user experience and data integrity.",
+    technologies: ["Python", "Django","Pandas", "Matplotlib", "Heroku", "PostgreSQL", "HTML", "CSS", "MVT"],
+    githubLink: "https://github.com/ffferchavez/dish-design",
+    projectUrl: "https://shielded-shelf-49827-8b78790942a0.herokuapp.com/",
   },
   {
     title: "Film Catalog Viewer 1",
