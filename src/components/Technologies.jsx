@@ -60,7 +60,7 @@ const additionalTools = {
     "Serverless Architecture", 
   ],
   "DevOps/Environment Management": [
-    "CI/CD pipelines", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
+    "CI/CD pipelines", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
     "pip",
   ],
   "Development Tools/Environments": [
