@@ -32,13 +32,11 @@ const techs = [
 
 const additionalTools = {
   "Programming Languages & Paradigms": [
-    "JavaScript","TypeScript", "Python", "C", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
+    "JavaScript", "TypeScript", "Python", "C", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
   ],
   "Frontend Development": [
     "React", "React Native", "React Router", "React-Bootstrap", "Angular", "Angular Material", "VueJS",
-    "Vuetify",
-    "Bootstrap", "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Tailwind CSS",
-    "Context API",
+    "Vuetify", "Bootstrap", "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Tailwind CSS", "Context API",
   ],
   "Backend Development": [
     "NodeJS", "ExpressJS", "Django", "AWS Lambda", "RESTful API", "JSON", "XML", "Object-Relational Mappers (ORMs)", "Matplotlib",
@@ -54,14 +52,14 @@ const additionalTools = {
   ],
   "Testing": [
     "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
-    "Unit Testing","E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "Features & User Stories"
+    "Unit Testing", "E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "Features & User Stories"
   ],
   "Development Concepts/Methodologies": [
     "Agile Development", "Clean Code", "DRY Code", "Progressive Web App (PWA)", "Single Page App (SPA)", "CRUD", "SCRUM", "Kanban", "MVT", "MCT",
     "Serverless Architecture", "Documentation Practices",
   ],
   "Documentation Tools": [
-  "JSDoc", "TSDoc",
+    "JSDoc", "TSDoc",
   ],
   "DevOps/Environment Management": [
     "CI/CD", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
@@ -75,8 +73,21 @@ const additionalTools = {
   ],
 };
 
+const hardwareDevelopmentTools = {
+  "CAD & PCB Design": [
+    "SOLIDWORKS", "Fusion360", "Inventor", "Altium Designer",
+  ],
+  "Prototyping & Manufacturing": [
+    "3D Printing (Bambu Slicer, Orca, Cura)", "Laser Cutting (Lightburn)", "Simulation & testing (LTspice)",
+  ],
+  "Embedded Systems": [
+    "Mega 2560", "ESP32", "Arduino", "Raspberry Pi", "PCB Design/Assembly",
+  ],
+};
+
 const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
+  const [showHardwareTools, setShowHardwareTools] = useState(false);
   const listRef = useRef(null);
 
   const toggleAdditionalTools = () => {
@@ -87,10 +98,19 @@ const Technologies = ({ isDarkMode }) => {
     setShowAdditionalTools(false);
   };
 
+  const toggleHardwareTools = () => {
+    setShowHardwareTools(!showHardwareTools);
+  };
+
+  const closeHardwareTools = () => {
+    setShowHardwareTools(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (listRef.current && !listRef.current.contains(event.target)) {
         closeAdditionalTools();
+        closeHardwareTools();
       }
     };
 
@@ -99,6 +119,21 @@ const Technologies = ({ isDarkMode }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  const renderTools = (tools) => {
+    return Array.isArray(tools)
+      ? tools.join(", ")
+      : Object.entries(tools).map(([subCategory, subTools], idx) => (
+          <div key={idx}>
+            <h4 className={`text-md font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+              {subCategory}
+            </h4>
+            <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              {subTools.join(", ")}
+            </p>
+          </div>
+        ));
+  };
 
   return (
     <div className={`border-b pb-24 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'}`}>
@@ -165,11 +200,43 @@ const Technologies = ({ isDarkMode }) => {
                 {Object.entries(additionalTools).map(([category, tools], index) => (
                   <div key={index}>
                     <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>{category}</h3>
-                    <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      {tools.join(", ")}
-                    </p>
+                    <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {renderTools(tools)}
+                    </div>
                   </div>
                 ))}
+                <motion.div
+                  onClick={toggleHardwareTools}
+                  className={`no-underline text-center cursor-pointer block mt-4 ${isDarkMode ? 'text-darkText hover:text-[#48CAE4]' : 'text-lightText hover:text-[#48CAE4]'}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1.5 }}
+                >
+                  My Hardware Dev Tools Here
+                </motion.div>
+                {showHardwareTools && (
+                  <motion.div
+                    className={`relative mt-4 text-left p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <button
+                      onClick={closeHardwareTools}
+                      className={`absolute top-2 right-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      &times;
+                    </button>
+                    <div className="space-y-4">
+                      <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                        {renderTools(hardwareDevelopmentTools)}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
               </div>
             </motion.div>
           </div>
