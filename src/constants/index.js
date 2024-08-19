@@ -137,6 +137,7 @@ export const PROJECTS = [
     githubLink: "https://github.com/ffferchavez/pokedex-app",
     projectUrl: "https://ffferchavez.github.io/pokedex-app/",
   },
+  /*
   {
     title: "Portfolio Website v1.0",
     image: project4,
@@ -154,8 +155,10 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "JavaScript", "JQuery"],
     githubLink: "https://github.com/ffferchavez/portfolio-website",
     projectUrl: "https://ffferchavez.github.io/to-do-list-app/",
-  },
+  },*/
 ];
+
+
 
 export const CONTACT = {
   address: "Kleve, Germany",
