@@ -7,6 +7,7 @@ import project6 from "../assets/projects/project-6.png";
 import project7 from "../assets/projects/project-7.png";
 import project8 from "../assets/projects/project-8.png";
 import project9 from "../assets/projects/project-9.png";
+import project10 from "../assets/projects/project-10.png";
 
 export const HERO_CONTENT = 
 `Full Stack Web Developer with more than a decade of Mechatronics experience, skilled in building
@@ -80,11 +81,21 @@ export const PROJECTS = [
     projectUrl: "https://shielded-shelf-49827-8b78790942a0.herokuapp.com/",
   },
   {
+    title: "Portfolio Website v2.0",
+    image: project10,
+    description:
+      "This portfolio website showcases my expertise in modern web development using React, Tailwind CSS, and Framer Motion. It features sections including Hero, About Me, Technologies, Projects, Experience and Contact, all designed to provide an engaging and dynamic user experience. This site serves as a central hub for potential employers or collaborators to explore my work, with a focus on responsive design, smooth animations, and a fast development process powered by Vite.",
+    technologies: ["React", "Tailwind CSS", "i18next", "Framer Motion", "HTML", "JavaScript", "Vite",
+                  "PostCSS", "Git", "Dark/Light Mode"],
+    githubLink: "https://github.com/ffferchavez/react-portfolio",
+    projectUrl: "https://manuel-fernando.com/",
+  },
+  {
     title: "Film Catalog Viewer 1",
     image: project2,
     description:
       "Marvel-Flix (React FrontEnd): This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own favorite movie lists and profiles.",
-    technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js"],
+    technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js",],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
     caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
