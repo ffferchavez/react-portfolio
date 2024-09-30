@@ -117,7 +117,7 @@ export const PROJECTS = [
       "myFlix (Angular FrontEnd): This project is a front-end application designed to interface with an existing movie database API. Built using Angular, it allows users to explore a wide range of movies, view detailed information about each film, director, and genre, and manage their profiles and favorite movie lists. The app features a responsive design and leverages Angular Material for a modern and intuitive user experience.",
     technologies: ["Angular", "Angular Material", "TypeScript", "Node.js", "TypeDoc", "Angular CLI", "MongoDB"],
     githubLink: "https://github.com/ffferchavez/myFlix-Angular",
-    projectUrl: "ffferchavez.github.io/myFlix-Angular/",
+    projectUrl: "https://ffferchavez.github.io/myFlix-Angular/welcome",
   },
   {
     title: "RESTful API",
