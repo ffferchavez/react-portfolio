@@ -1,6 +1,12 @@
 import { useState, useRef, useEffect } from "react";
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiPython, SiPostman, SiFigma, SiGithub } from "react-icons/si";
+import {
+  SiMongodb,
+  SiPython,
+  SiPostman,
+  SiFigma,
+  SiGithub,
+} from "react-icons/si";
 import { FaNodeJs, FaAngular } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { motion } from "framer-motion";
@@ -32,56 +38,142 @@ const techs = [
 
 const additionalTools = {
   "Programming Languages & Paradigms": [
-    "JavaScript", "Python", "TypeScript", "C", "OOP", "FP",
+    "JavaScript",
+    "Python",
+    "TypeScript",
+    "C",
+    "OOP",
+    "FP",
   ],
   "Frontend Development": [
-    "React", "React Native", "React Router", "React-Bootstrap", "TailwindCSS", "Angular", "Angular Material", "Bootstrap", 
-    "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Context API",
+    "React",
+    "React Native",
+    "React Router",
+    "React-Bootstrap",
+    "TailwindCSS",
+    "Angular",
+    "Angular Material",
+    "Bootstrap",
+    "HTML",
+    "CSS",
+    "SCSS",
+    "JQuery",
+    "Recharts",
+    "Redux",
+    "Context API",
   ],
   "Backend Development": [
-    "NodeJS", "ExpressJS", "Django", "RESTful API", "JSON", "XML", "ORM",
+    "NodeJS",
+    "ExpressJS",
+    "Django",
+    "RESTful API",
+    "JSON",
+    "XML",
+    "ORM",
   ],
-  "Databases": [
-    "MongoDB", "PostgreSQL", "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
+  Databases: [
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "SQLite",
+    "SQLAlchemy",
+    "Admin4",
+    "MariaDB",
+    "Firebase Realtime DB",
   ],
   "Hosting/Cloud Services": [
-    "Heroku", "Netlify", "AWS", "Firebase", "Github Pages",
+    "Heroku",
+    "Netlify",
+    "AWS",
+    "Firebase",
+    "Github Pages",
   ],
   "Authentication & Security": [
-    "OAuth 2.0", "JSON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS", "PyJWT"
+    "OAuth 2.0",
+    "JSON Web Tokens (JWT)",
+    "CORS (Cross-Origin Resource Sharing)",
+    "PassportJS",
+    "PyJWT",
   ],
-  "Testing": [
-    "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
-    "Unit Testing", "E2E", "Gherkin", "Jest", "Cucumber", "Puppeteer", "Features & User Stories"
+  Testing: [
+    "Test Driven Development (TDD)",
+    "Behavior Driven Development (BDD)",
+    "Unit Testing",
+    "E2E",
+    "Gherkin",
+    "Jest",
+    "Cucumber",
+    "Puppeteer",
+    "Features & User Stories",
   ],
   "Development Concepts/Methodologies": [
-    "Agile Development", "Clean Code", "DRY Code", "Progressive Web App (PWA)", "Single Page App (SPA)", "CRUD", "SCRUM", "Kanban", "MVT", "MCT",
-    "Serverless Architecture", "Documentation Practices",
+    "Agile Development",
+    "Clean Code",
+    "DRY Code",
+    "Progressive Web App (PWA)",
+    "Single Page App (SPA)",
+    "CRUD",
+    "SCRUM",
+    "Kanban",
+    "MVT",
+    "MCT",
+    "Serverless Architecture",
+    "Documentation Practices",
   ],
-  "Documentation Tools": [
-    "JSDoc", "TSDoc",
-  ],
+  "Documentation Tools": ["JSDoc", "TSDoc"],
   "DevOps/Environment Management": [
-    "CI/CD", "Lighthouse", "Docker", "Zsh", "MacOS", "npm/npx",
-    "pip", "ng",
+    "CI/CD",
+    "Lighthouse",
+    "Docker",
+    "Zsh",
+    "MacOS",
+    "npm/npx",
+    "pip",
+    "ng",
   ],
   "Development Tools/Environments": [
-    "Visual Studio Code", "Cursor", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman", "Matlab",
+    "Visual Studio Code",
+    "Cursor",
+    "Git",
+    "Xcode",
+    "Android Studio",
+    "CodeBlocks",
+    "Repl",
+    "CodeSandBox",
+    "Postman",
+    "Matlab",
   ],
   "Project Management & Design Tools": [
-    "Trello", "Jira", "Confluence", "Canva", "Figma", "Sketch", "Blender", "Spline", "AI Gen",
+    "Trello",
+    "Jira",
+    "Confluence",
+    "Canva",
+    "Figma",
+    "Sketch",
+    "Blender",
+    "Spline",
+    "AI Gen",
   ],
 };
 
 const hardwareDevelopmentTools = {
   "CAD & PCB Design": [
-    "SOLIDWORKS", "Fusion360", "Inventor", "Altium Designer",
+    "SOLIDWORKS",
+    "Fusion360",
+    "Inventor",
+    "Altium Designer",
   ],
   "Prototyping & Manufacturing": [
-    "3D Printing (Bambu Slicer, Orca, Cura)", "Laser Cutting (Lightburn)", "Simulation & testing (LTspice)",
+    "3D Printing (Bambu Slicer, Orca, Cura)",
+    "Laser Cutting (Lightburn)",
+    "Simulation & testing (LTspice)",
   ],
   "Embedded Systems": [
-    "Mega 2560", "ESP32", "Arduino", "Raspberry Pi", "PCB Design/Assembly",
+    "Mega 2560",
+    "ESP32",
+    "Arduino",
+    "Raspberry Pi",
+    "PCB Design/Assembly",
   ],
 };
 
@@ -89,13 +181,22 @@ const Technologies = ({ isDarkMode }) => {
   const [showAdditionalTools, setShowAdditionalTools] = useState(false);
   const [showHardwareTools, setShowHardwareTools] = useState(false);
   const listRef = useRef(null);
+  const scrollPositionRef = useRef(0);
 
   const toggleAdditionalTools = () => {
+    if (!showAdditionalTools) {
+      // Save the current scroll position before opening
+      scrollPositionRef.current = window.scrollY;
+    }
     setShowAdditionalTools(!showAdditionalTools);
   };
 
   const closeAdditionalTools = () => {
     setShowAdditionalTools(false);
+    // Restore the scroll position after closing
+    setTimeout(() => {
+      window.scrollTo({ top: scrollPositionRef.current, behavior: "smooth" });
+    }, 50);
   };
 
   const toggleHardwareTools = () => {
@@ -120,15 +221,43 @@ const Technologies = ({ isDarkMode }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (listRef.current && !listRef.current.contains(event.target)) {
+        closeAdditionalTools();
+        closeHardwareTools();
+      }
+    };
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeAdditionalTools();
+        closeHardwareTools();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   const renderTools = (tools) => {
     return Array.isArray(tools)
       ? tools.join(", ")
       : Object.entries(tools).map(([subCategory, subTools], idx) => (
           <div key={idx}>
-            <h4 className={`text-md font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+            <h4
+              className={`text-md font-semibold ${
+                isDarkMode ? "text-gray-200" : "text-gray-800"
+              }`}
+            >
               {subCategory}
             </h4>
-            <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            <p className={`${isDarkMode ? "text-gray-400" : "text-gray-600"}`}>
               {subTools.join(", ")}
             </p>
           </div>
@@ -136,12 +265,18 @@ const Technologies = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={`border-b pb-24 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'}`}>
+    <div
+      className={`border-b pb-24 ${
+        isDarkMode ? "border-neutral-800" : "border-neutral-300"
+      }`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className={`my-20 text-center text-4xl ${isDarkMode ? 'text-darkText' : 'text-lightText'}`}
+        className={`my-20 text-center text-4xl ${
+          isDarkMode ? "text-darkText" : "text-lightText"
+        }`}
       >
         Technologies
       </motion.h2>
@@ -157,14 +292,27 @@ const Technologies = ({ isDarkMode }) => {
             variants={iconVariants(2 + (index % 4))}
             initial="initial"
             animate="animate"
-            className={`relative mb-4 rounded-2xl border-4 ${isDarkMode ? 'border-neutral-800' : 'border-neutral-300'} p-4 flex items-center justify-center group`}
+            className={`relative mb-4 rounded-2xl border-4 ${
+              isDarkMode ? "border-neutral-800" : "border-neutral-300"
+            } p-4 flex items-center justify-center group`}
           >
             <tech.Icon className={`text-7xl ${tech.color}`} />
             <motion.div
-              className={`absolute inset-0 flex items-center justify-center ${isDarkMode ? 'bg-black bg-opacity-80 text-gray-300' : 'bg-gray-300 bg-opacity-80 text-gray-800'} rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+              className={`absolute inset-0 flex items-center justify-center ${
+                isDarkMode
+                  ? "bg-black bg-opacity-80 text-gray-300"
+                  : "bg-gray-300 bg-opacity-80 text-gray-800"
+              } rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               style={{ width: "100%", height: "100%" }}
             >
-              <span className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}> {tech.name} </span>
+              <span
+                className={`text-xl ${
+                  isDarkMode ? "text-gray-300" : "text-gray-800"
+                }`}
+              >
+                {" "}
+                {tech.name}{" "}
+              </span>
             </motion.div>
           </motion.div>
         ))}
@@ -172,7 +320,11 @@ const Technologies = ({ isDarkMode }) => {
       <div className="text-center mt-8">
         <motion.div
           onClick={toggleAdditionalTools}
-          className={`no-underline cursor-pointer block mt-4 ${isDarkMode ? 'text-darkText hover:text-[#48CAE4]' : 'text-lightText hover:text-[#48CAE4]'}`}
+          className={`no-underline cursor-pointer block mt-4 ${
+            isDarkMode
+              ? "text-darkText hover:text-black"
+              : "text-lightText hover:text-[#ba9935]"
+          }`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 100 }}
@@ -184,30 +336,50 @@ const Technologies = ({ isDarkMode }) => {
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">
             <motion.div
-              className={`relative mt-4 text-left p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
+              className={`relative mt-4 text-left p-6 rounded shadow-lg ${
+                isDarkMode ? "bg-black" : "bg-gray-50"
+              }`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <button
                 onClick={closeAdditionalTools}
-                className={`absolute top-2 right-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
-                style={{ cursor: 'pointer' }}
+                className={`absolute top-2 right-2 ${
+                  isDarkMode ? "text-gray-400" : "text-gray-800"
+                }`}
+                style={{ cursor: "pointer" }}
               >
                 &times;
               </button>
               <div className="space-y-4">
-                {Object.entries(additionalTools).map(([category, tools], index) => (
-                  <div key={index}>
-                    <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>{category}</h3>
-                    <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                      {renderTools(tools)}
+                {Object.entries(additionalTools).map(
+                  ([category, tools], index) => (
+                    <div key={index}>
+                      <h3
+                        className={`text-lg font-semibold ${
+                          isDarkMode ? "text-gray-200" : "text-gray-800"
+                        }`}
+                      >
+                        {category}
+                      </h3>
+                      <div
+                        className={`${
+                          isDarkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
+                      >
+                        {renderTools(tools)}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                )}
                 <motion.div
                   onClick={toggleHardwareTools}
-                  className={`no-underline text-center cursor-pointer block mt-4 ${isDarkMode ? 'text-darkText hover:text-[#48CAE4]' : 'text-lightText hover:text-[#48CAE4]'}`}
+                  className={`no-underline text-center cursor-pointer block mt-4 ${
+                    isDarkMode
+                      ? "text-darkText hover:text-gray-500"
+                      : "text-lightText hover:text-[#deab12]"
+                  }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 100 }}
@@ -218,20 +390,28 @@ const Technologies = ({ isDarkMode }) => {
                 </motion.div>
                 {showHardwareTools && (
                   <motion.div
-                    className={`relative mt-4 text-left p-6 rounded shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
+                    className={`relative mt-4 text-left p-6 rounded shadow-lg ${
+                      isDarkMode ? "bg-black" : "bg-gray-100"
+                    }`}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5 }}
                   >
                     <button
                       onClick={closeHardwareTools}
-                      className={`absolute top-2 right-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-800'}`}
-                      style={{ cursor: 'pointer' }}
+                      className={`absolute top-2 right-2 ${
+                        isDarkMode ? "text-gray-400" : "text-gray-800"
+                      }`}
+                      style={{ cursor: "pointer" }}
                     >
                       &times;
                     </button>
                     <div className="space-y-4">
-                      <div className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <div
+                        className={`${
+                          isDarkMode ? "text-gray-400" : "text-gray-600"
+                        }`}
+                      >
                         {renderTools(hardwareDevelopmentTools)}
                       </div>
                     </div>

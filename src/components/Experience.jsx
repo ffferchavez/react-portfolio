@@ -4,12 +4,18 @@ import cvPdf from "../assets/manuel-fernando-resume.pdf";
 
 const Experience = ({ isDarkMode }) => {
   return (
-    <div className={`border-b pb-4 ${isDarkMode ? 'border-neutral-900' : 'border-neutral-300'}`}>
+    <div
+      className={`border-b pb-4 ${
+        isDarkMode ? "border-neutral-900" : "border-neutral-300"
+      }`}
+    >
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className={`my-20 text-center text-4xl ${isDarkMode ? 'text-darkText' : 'text-lightText'}`}
+        className={`my-20 text-center text-4xl ${
+          isDarkMode ? "text-darkText" : "text-lightText"
+        }`}
       >
         Experience
       </motion.h2>
@@ -22,7 +28,11 @@ const Experience = ({ isDarkMode }) => {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <p className={`mb-2 text-sm ${isDarkMode ? 'text-neutral-400' : 'text-gray-600'}`}>
+              <p
+                className={`mb-2 ml-20 text-sm ${
+                  isDarkMode ? "text-black" : "text-gray-600"
+                }`}
+              >
                 {experience.year}
               </p>
             </motion.div>
@@ -32,22 +42,36 @@ const Experience = ({ isDarkMode }) => {
               transition={{ duration: 1 }}
               className="w-full max-w-xl lg:w-3/4"
             >
-              <h6 className={`mb-2 font-semibold ${isDarkMode ? 'text-gray-300' : 'text-gray-800'}`}>
+              <h6
+                className={`mb-2 font-semibold ${
+                  isDarkMode ? "text-gray-300" : "text-gray-800"
+                }`}
+              >
                 {experience.role} -{" "}
                 <span
-                  className={`text-sm ${isDarkMode ? 'text-neutral-400' : 'text-gray-600'}`}
+                  className={`text-sm ${
+                    isDarkMode ? "text-neutral-400" : "text-gray-600"
+                  }`}
                 >
                   {experience.company}
                 </span>
               </h6>
-              <p className={`mb-4 ${isDarkMode ? 'text-neutral-400' : 'text-gray-800'}`}>
+              <p
+                className={`mb-4 ${
+                  isDarkMode ? "text-neutral-400" : "text-gray-800"
+                }`}
+              >
                 {experience.description}
               </p>
               <div className="flex flex-wrap mb-4">
                 {experience.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className={`mr-2 mb-2 rounded px-2 py-1 text-sm font-medium ${isDarkMode ? 'bg-neutral-900 text-[#48CAE4]' : 'bg-neutral-200 text-[#48CAE4]'}`}
+                    className={`mr-2 mb-2 rounded px-2 py-1 text-sm font-medium ${
+                      isDarkMode
+                        ? "bg-neutral-900 text-white"
+                        : "bg-neutral-200 text-[#deab12]"
+                    }`}
                   >
                     {tech}
                   </span>
@@ -66,25 +90,14 @@ const Experience = ({ isDarkMode }) => {
         <a
           href={cvPdf}
           download
-          className={`text-2xl no-underline ${isDarkMode ? 'text-gray-200' : 'text-gray-900'}`}
-          style={{ textDecoration: "none", transition: "color 0.2s ease" }}
+          className={`text-2xl no-underline transition-colors duration-200 ${
+            isDarkMode
+              ? "text-gray-300 hover:text-white"
+              : "text-gray-900 hover:text-[#deab12]"
+          }`}
         >
           Download My Resume Here
         </a>
-        <style>
-          {`
-            .text-gray-200:hover {
-              color: #48CAE4 !important;
-            }
-            .text-gray-900:hover {
-              color: #48CAE4 !important;
-            }
-            /* Remove hover effect for role text */
-            .text-gray-200, .text-gray-900 {
-              text-decoration: none;
-            }
-          `}
-        </style>
       </motion.div>
     </div>
   );

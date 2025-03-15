@@ -8,8 +8,7 @@ import project9 from "../assets/projects/project-9.png";
 import project10 from "../assets/projects/project-10.png";
 import project11 from "../assets/projects/project-11.png";
 
-export const HERO_CONTENT = 
-`Full-Stack Developer with over a decade of Industry experience, specializing in building responsive, 
+export const HERO_CONTENT = `Full-Stack Developer with over a decade of Industry experience, specializing in building responsive, 
 high-performance applications using modern technologies and frameworks. Combines technical precision with innovative problem-solving 
 to optimize performance and enhance user experiences. Passionate about AI and emerging web development trends, 
 constantly learning and adapting to create scalable, future-proof solutions.`;
@@ -30,7 +29,15 @@ export const EXPERIENCES = [
     and performance of current landing pages. Leading web development architecture with a focus on scalability, security, and compliance. 
     Ensuring efficient API development, data management, and authentication while optimizing workflows. 
     Managing databases, file transfers, and performance testing, while refining UI/UX through prototyping and optimization tools.`,
-    technologies: ["React", "Django", "TailwindCSS","MariaDB", "REST", "WordPress", "Python"],
+    technologies: [
+      "React",
+      "Django",
+      "TailwindCSS",
+      "MariaDB",
+      "REST",
+      "WordPress",
+      "Python",
+    ],
   },
   {
     year: "2025 - Today",
@@ -39,7 +46,15 @@ export const EXPERIENCES = [
     description: `Enhancing business performance and operations through AI and automation, with a strong focus on Business Intelligence (BI). 
     Implementing ETL processes, building data-driven infrastructures, and enabling AI-powered analysis. 
     Optimizing data management, system integrations, and automation to drive valuable business insights and efficiency.`,
-    technologies: ["Python", "TensorFlow", "MySQL","ERPNext", "Shopify", "SP-API", "Pandas"],
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "MySQL",
+      "ERPNext",
+      "Shopify",
+      "SP-API",
+      "Pandas",
+    ],
   },
   {
     year: "2024 - 2024",
@@ -47,7 +62,15 @@ export const EXPERIENCES = [
     company: "J&G Agency GmbH",
     description: `Contribution to the programming of user-friendly frontends and robust backends using modern technologies.
 Active participation in the planning of new applications, whereby I can contribute my own ideas.`,
-    technologies: ["HTML", "CSS", "JavaScript","Vue", "Vuetify", "Node", "MariaDB"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue",
+      "Vuetify",
+      "Node",
+      "MariaDB",
+    ],
   },
   {
     year: "2022 - 2023",
@@ -61,7 +84,13 @@ Active participation in the planning of new applications, whereby I can contribu
     Side On Plasma Viewing (SOP).
 
     Integration of each part in the machines from electronics, mechanics and software calibrations. From zero until delivery, carrying out the complete documentation for different countries worldwide.`,
-    technologies: ["C", "Matlab", "Ansys Mechanical APDL", "Power Electronics", "Microcontrollers"],
+    technologies: [
+      "C",
+      "Matlab",
+      "Ansys Mechanical APDL",
+      "Power Electronics",
+      "Microcontrollers",
+    ],
   },
   {
     year: "2021 - 2025",
@@ -76,7 +105,7 @@ Active participation in the planning of new applications, whereby I can contribu
     Penetrant Testing (PT).
 
     Then, evaluation of results and report of failures.`,
-    technologies: ["VT", "RT", "MT", "HT","PT","UT",],
+    technologies: ["VT", "RT", "MT", "HT", "PT", "UT"],
   },
 ];
 
@@ -86,7 +115,19 @@ export const PROJECTS = [
     image: project6,
     description:
       "Meet App: Meet is a Progressive Web App for event discovery and management, integrating with the Google Calendar API. Built with React and following TDD/BDD practices, it offers city-based event filtering, offline functionality, and data visualization. The app utilizes AWS Lambda and a serverless architecture for backend processes, ensuring scalable and secure performance. Installable on both desktop and mobile devices, Meet provides a seamless user experience across platforms.",
-    technologies: ["React" , "PWA", "AWS Lambda", "Node.js", "Express.js", "MongoDB", "Jest", "Cucumber", "OAuth 2.0", "Recharts", "Service Workers"],
+    technologies: [
+      "React",
+      "PWA",
+      "AWS Lambda",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Jest",
+      "Cucumber",
+      "OAuth 2.0",
+      "Recharts",
+      "Service Workers",
+    ],
     githubLink: "https://github.com/ffferchavez/meet",
     projectUrl: "https://ffferchavez.github.io/meet/",
   },
@@ -95,7 +136,7 @@ export const PROJECTS = [
     image: project11,
     description:
       "MexiGo Website: MexiGo is a professionally designed and fully responsive website, crafted with a user-friendly experience in mind. Designed in Figma and Canva, and developed and deployed using Framer, the site seamlessly blends aesthetics with performance. It features an integrated CMS, allowing the client to easily update and manage content, including text and images. Hosted on a custom domain, MexiGo ensures a smooth and engaging experience across all devices.",
-    technologies: ["Figma" , "Framer", "Canva", "Hostinger", "UX/UI"],
+    technologies: ["Figma", "Framer", "Canva", "Hostinger", "UX/UI"],
     githubLink: "https://github.com/ffferchavez/mex-plora-tours",
     projectUrl: "https://mexigo.framer.ai/",
   },
@@ -104,7 +145,17 @@ export const PROJECTS = [
     image: project9,
     description:
       "DishDesign: A dynamic and user-friendly Recipe Management Web Application built with Python and Django. DishDesign allows users to create, manage, and search for recipes based on ingredients, cooking time, and difficulty. Featuring an admin panel for efficient data management, the app also provides statistical dashboards using data analytics and visualization techniques. Deployed on Heroku with PostgreSQL, DishDesign showcases a seamless blend of backend and frontend development with a focus on user experience and data integrity.",
-    technologies: ["Python", "Django","Pandas", "Matplotlib", "Heroku", "PostgreSQL", "HTML", "CSS", "MVT"],
+    technologies: [
+      "Python",
+      "Django",
+      "Pandas",
+      "Matplotlib",
+      "Heroku",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+      "MVT",
+    ],
     githubLink: "https://github.com/ffferchavez/dish-design",
     projectUrl: "https://shielded-shelf-49827-8b78790942a0.herokuapp.com/",
   },
@@ -113,8 +164,18 @@ export const PROJECTS = [
     image: project10,
     description:
       "This portfolio website showcases my expertise in modern web development using React, Tailwind CSS, and Framer Motion. It features sections including Hero, About Me, Technologies, Projects, Experience and Contact, all designed to provide an engaging and dynamic user experience. This site serves as a central hub for potential employers or collaborators to explore my work, with a focus on responsive design, smooth animations, and a fast development process powered by Vite.",
-    technologies: ["React", "Tailwind CSS", "i18next", "Framer Motion", "HTML", "JavaScript", "Vite",
-                  "PostCSS", "Git", "Dark/Light Mode"],
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "i18next",
+      "Framer Motion",
+      "HTML",
+      "JavaScript",
+      "Vite",
+      "PostCSS",
+      "Git",
+      "Dark/Light Mode",
+    ],
     githubLink: "https://github.com/ffferchavez/react-portfolio",
     projectUrl: "https://manuel-fernando.com/",
   },
@@ -123,17 +184,33 @@ export const PROJECTS = [
     image: project2,
     description:
       "Marvel-Flix (React FrontEnd): This project is a front-end application built to interact with my movie database API (Marvel Flix API). It allows users to browse movies, view details such as descriptions and manage their own favorite movie lists and profiles.",
-    technologies: ["React", "SCSS", "Netlify", "Node", "React-Bootstrap", "Express.js",],
+    technologies: [
+      "React",
+      "SCSS",
+      "Netlify",
+      "Node",
+      "React-Bootstrap",
+      "Express.js",
+    ],
     githubLink: "https://github.com/ffferchavez/myFlix-client",
     projectUrl: "https://marvel-flix-app.netlify.app/",
-    caseStudyLink: "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
+    caseStudyLink:
+      "https://drive.google.com/file/d/1b-LW_Z3n5hpZve2_YQrAWMwWgZkEHKGS/view?usp=sharing",
   },
   {
     title: "Chat Application",
     image: project8,
     description:
       "ChatMate (React Native Mobile App): ChatMate is a cross-platform mobile chat application built with React Native and Expo. It provides a smooth chat experience with text messaging, image sharing, and real-time location updates. Users can join chat rooms, send photos, and share their location. Conversations are stored online in Google Firestore and locally for offline access. Firebase is used for anonymous authentication, and the app includes accessibility features for diverse users.",
-    technologies: ["React Native", "Expo", "Xcode", "Android Studio", "Firestore", "Firebase", "AsyncStorage"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Xcode",
+      "Android Studio",
+      "Firestore",
+      "Firebase",
+      "AsyncStorage",
+    ],
     githubLink: "https://github.com/ffferchavez/chatmate",
     projectUrl: "https://github.com/ffferchavez/chatmate",
   },
@@ -143,7 +220,15 @@ export const PROJECTS = [
     image: project7,
     description:
       "myFlix (Angular FrontEnd): This project is a front-end application designed to interface with an existing movie database API. Built using Angular, it allows users to explore a wide range of movies, view detailed information about each film, director, and genre, and manage their profiles and favorite movie lists. The app features a responsive design and leverages Angular Material for a modern and intuitive user experience.",
-    technologies: ["Angular", "Angular Material", "TypeScript", "Node.js", "TypeDoc", "Angular CLI", "MongoDB"],
+    technologies: [
+      "Angular",
+      "Angular Material",
+      "TypeScript",
+      "Node.js",
+      "TypeDoc",
+      "Angular CLI",
+      "MongoDB",
+    ],
     githubLink: "https://github.com/ffferchavez/myFlix-Angular",
     projectUrl: "https://ffferchavez.github.io/myFlix-Angular/welcome",
   },
@@ -166,8 +251,6 @@ export const PROJECTS = [
     projectUrl: "https://ffferchavez.github.io/pokedex-app/",
   },
 ];
-
-
 
 export const CONTACT = {
   address: "Kleve, Germany",
