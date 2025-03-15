@@ -33,7 +33,7 @@ const techs = [
   { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
   { Icon: SiGithub, name: "GitHub", color: "text-purple-600" },
   { Icon: SiPostman, name: "Postman", color: "text-orange-500" },
-  { Icon: SiFigma, name: "Figma", color: "text-white" },
+  { Icon: SiFigma, name: "Figma", color: "text-[#0ACF83]" },
 ];
 
 const additionalTools = {
@@ -296,7 +296,13 @@ const Technologies = ({ isDarkMode }) => {
               isDarkMode ? "border-neutral-800" : "border-neutral-300"
             } p-4 flex items-center justify-center group`}
           >
-            <tech.Icon className={`text-7xl ${tech.color}`} />
+            {tech.name === "Figma" ? (
+              <div className="bg-gradient-to-br from-[#F24E1E] via-[#b930e7] to-[#0ACF83] p-1 rounded-lg">
+                <tech.Icon className="text-7xl text-white" />
+              </div>
+            ) : (
+              <tech.Icon className={`text-7xl ${tech.color}`} />
+            )}
             <motion.div
               className={`absolute inset-0 flex items-center justify-center ${
                 isDarkMode
