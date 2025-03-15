@@ -1,6 +1,6 @@
 import React from 'react';
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/mfProfile1.jpg";
+import profilePic from "../assets/mfProfile.jpg";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -22,7 +22,7 @@ const Hero = () => {
               variants={container(0)}
               initial="hidden"
               animate="visible"
-              className="pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-7xl dark:text-darkText text-lightText"
+              className="pb-16 text-4xl font-thin tracking-tight lg:mt-16 lg:text-6xl dark:text-darkText text-lightText"
             >
               Manuel Fernando
             </motion.h2>
@@ -75,13 +75,12 @@ const Hero = () => {
           }
           .blob {
             overflow: hidden;
-            width: 26rem;
+            width: 32rem;
             height: 26rem;
             border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
             background-size: cover;
             background-position: center;
-            animation: morph 3.75s linear infinite;
-            filter: grayscale;
+            animation: morph 2.5s linear infinite;
           }
         `}
       </style>

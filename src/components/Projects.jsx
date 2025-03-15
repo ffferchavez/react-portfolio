@@ -10,7 +10,7 @@ const Projects = ({ isDarkMode }) => {
         transition={{ duration: 0.5 }}
         className={`my-20 text-center text-4xl ${isDarkMode ? 'text-darkText' : 'text-lightText'}`}
       >
-        Projects
+        Some Projects
       </motion.h2>
       <div>
         {PROJECTS.map((project, index) => (

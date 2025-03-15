@@ -1,34 +1,53 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
-import project4 from "../assets/projects/project-4.png";
-import project5 from "../assets/projects/project-5.png";
 import project6 from "../assets/projects/project-6.png";
 import project7 from "../assets/projects/project-7.png";
 import project8 from "../assets/projects/project-8.png";
 import project9 from "../assets/projects/project-9.png";
 import project10 from "../assets/projects/project-10.png";
+import project11 from "../assets/projects/project-11.png";
 
 export const HERO_CONTENT = 
-`Full Stack Web Developer with more than a decade of Mechatronics experience, skilled in building
-responsive applications using modern technologies and frameworks.
-Combines technical precision and innovative problem-solving to optimize performance and enhance
-user experiences.`;
+`Full-Stack Developer with over a decade of Industry experience, specializing in building responsive, 
+high-performance applications using modern technologies and frameworks. Combines technical precision with innovative problem-solving 
+to optimize performance and enhance user experiences. Passionate about AI and emerging web development trends, 
+constantly learning and adapting to create scalable, future-proof solutions.`;
 
-export const ABOUT_TEXT = 
-`<p style="margin-bottom: 12px;">Hi, I’m a Full Stack Web Developer transitioning from more than a decade in Mechatronics. This unique journey has shaped me into a developer who blends technical precision with innovative problem-solving.</p>
-<p style="margin-bottom: 12px;">I build responsive, efficient applications using modern technologies and frameworks, always prioritizing user experience. My engineering background gives me a strong analytical foundation, enabling me to tackle complex challenges methodically.</p>
-<p style="margin-bottom: 12px;">Additionally, my curiosity and passion for learning drive me to explore new technologies and creative solutions. I’m eager to join a forward-thinking tech company where I can leverage my diverse skill set, bring fresh perspectives, and contribute to impactful projects.</p>
-<p style="margin-bottom: 12px;">I’m not just changing careers – I’m evolving my professional identity to merge the best of both worlds.</p>`;
+export const ABOUT_TEXT = `
+<p>I am a Full-Stack Developer with a background in Mechatronics Engineering, bringing 13 years of experience across industries like Tech, Automotive, Manufacturing, and Design. My transition into web development has allowed me to merge analytical thinking with hands-on problem-solving to build scalable, high-performance applications.</p>
+<p>I specialize in developing secure and efficient full-stack web applications, focusing on frontend development, backend architecture, and seamless integrations. My expertise includes designing and maintaining databases, optimizing performance, and ensuring responsive user experiences. I build modern, scalable solutions that prioritize usability, security, and maintainability.</p>
+<p>My approach is structured and detail-oriented, balancing precision with adaptability. I thrive on solving complex challenges, continuously learning, and refining my skills to stay ahead in the ever-evolving tech landscape. Fluent in German, English, and Spanish, I value clear communication and teamwork in every project I contribute to.</p>
+<p>Currently, I am focused on developing dynamic, responsive web applications that enhance user engagement and business efficiency. My goal is to build high-quality digital experiences that are both functional and future-proof.</p>
+`;
 
 export const EXPERIENCES = [
+  {
+    year: "2025 - Today",
+    role: "Full-Stack Web Developer",
+    company: "Fink & Partner GmbH",
+    description: `Developing and optimizing data-sensitive applications that integrate with LIMS while maintaining and improving the design 
+    and performance of current landing pages. Leading web development architecture with a focus on scalability, security, and compliance. 
+    Ensuring efficient API development, data management, and authentication while optimizing workflows. 
+    Managing databases, file transfers, and performance testing, while refining UI/UX through prototyping and optimization tools.`,
+    technologies: ["React", "Django", "TailwindCSS","MariaDB", "REST", "WordPress", "Python"],
+  },
+  {
+    year: "2025 - Today",
+    role: "AI/BI Specialist",
+    company: "AGREZOR International GmbH",
+    description: `Enhancing business performance and operations through AI and automation, with a strong focus on Business Intelligence (BI). 
+    Implementing ETL processes, building data-driven infrastructures, and enabling AI-powered analysis. 
+    Optimizing data management, system integrations, and automation to drive valuable business insights and efficiency.`,
+    technologies: ["Python", "TensorFlow", "MySQL","ERPNext", "Shopify", "SP-API", "Pandas"],
+  },
   {
     year: "2024 - 2024",
     role: "Full-Stack Developer",
     company: "J&G Agency GmbH",
     description: `Contribution to the programming of user-friendly frontends and robust backends using modern technologies.
 Active participation in the planning of new applications, whereby I can contribute my own ideas.`,
-    technologies: ["HTML", "CSS", "JavaScript","Vue", "Vuetify", "Node", "mySQL"],
+    technologies: ["HTML", "CSS", "JavaScript","Vue", "Vuetify", "Node", "MariaDB"],
   },
   {
     year: "2022 - 2023",
@@ -42,10 +61,10 @@ Active participation in the planning of new applications, whereby I can contribu
     Side On Plasma Viewing (SOP).
 
     Integration of each part in the machines from electronics, mechanics and software calibrations. From zero until delivery, carrying out the complete documentation for different countries worldwide.`,
-    technologies: ["C", "Matlab", "Ansys Mechanical APDL", "Power Electronics"],
+    technologies: ["C", "Matlab", "Ansys Mechanical APDL", "Power Electronics", "Microcontrollers"],
   },
   {
-    year: "2021 - Present",
+    year: "2021 - 2025",
     role: "Materials Testing Technology",
     company: "WTBrinkmann GmbH",
     description: `
@@ -70,6 +89,15 @@ export const PROJECTS = [
     technologies: ["React" , "PWA", "AWS Lambda", "Node.js", "Express.js", "MongoDB", "Jest", "Cucumber", "OAuth 2.0", "Recharts", "Service Workers"],
     githubLink: "https://github.com/ffferchavez/meet",
     projectUrl: "https://ffferchavez.github.io/meet/",
+  },
+  {
+    title: "MexiGo Landing Page",
+    image: project11,
+    description:
+      "MexiGo Website: MexiGo is a professionally designed and fully responsive website, crafted with a user-friendly experience in mind. Designed in Figma and Canva, and developed and deployed using Framer, the site seamlessly blends aesthetics with performance. It features an integrated CMS, allowing the client to easily update and manage content, including text and images. Hosted on a custom domain, MexiGo ensures a smooth and engaging experience across all devices.",
+    technologies: ["Figma" , "Framer", "Canva", "Hostinger", "UX/UI"],
+    githubLink: "https://github.com/ffferchavez/mex-plora-tours",
+    projectUrl: "https://mexigo.framer.ai/",
   },
   {
     title: "Recipes Management",
@@ -137,25 +165,6 @@ export const PROJECTS = [
     githubLink: "https://github.com/ffferchavez/pokedex-app",
     projectUrl: "https://ffferchavez.github.io/pokedex-app/",
   },
-  /*
-  {
-    title: "Portfolio Website v1.0",
-    image: project4,
-    description:
-      "Portfolio Website is a showcase of my skills with Vanilla JavaScript, plain HTML and CSS. It includes sections About Me, Skills, Projects, and Contact Form. It serves as a hub for potential employers or collaborators to learn more about my work and skills.",
-    technologies: ["HTML", "CSS", "Vanilla JavaScript"],
-    githubLink: "https://github.com/ffferchavez/portfolio-website",
-    projectUrl: "https://ffferchavez.github.io/portfolio-website/",
-  },
-  {
-    title: "To-Do List Application",
-    image: project5,
-    description:
-      "The To-Do List App is a simple task management application. Users can create tasks, mark them as completed, and delete them. It may include later on features like task prioritization, due dates, and categories or labels for organizing tasks.",
-    technologies: ["HTML", "CSS", "JavaScript", "JQuery"],
-    githubLink: "https://github.com/ffferchavez/portfolio-website",
-    projectUrl: "https://ffferchavez.github.io/to-do-list-app/",
-  },*/
 ];
 
 

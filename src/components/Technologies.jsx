@@ -20,11 +20,11 @@ const iconVariants = (duration) => ({
 
 const techs = [
   { Icon: RiReactjsLine, name: "React", color: "text-cyan-400" },
-  { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
+  { Icon: FaAngular, name: "Angular", color: "text-red-600" },
   { Icon: SiPython, name: "Python", color: "text-yellow-500" },
   { Icon: FaNodeJs, name: "Node", color: "text-green-500" },
   { Icon: BiLogoPostgresql, name: "PostgreSQL", color: "text-sky-700" },
-  { Icon: FaAngular, name: "Angular", color: "text-red-600" },
+  { Icon: SiMongodb, name: "MongoDB", color: "text-green-500" },
   { Icon: SiGithub, name: "GitHub", color: "text-purple-600" },
   { Icon: SiPostman, name: "Postman", color: "text-orange-500" },
   { Icon: SiFigma, name: "Figma", color: "text-white" },
@@ -32,14 +32,14 @@ const techs = [
 
 const additionalTools = {
   "Programming Languages & Paradigms": [
-    "JavaScript", "TypeScript", "Python", "C", "Object-Oriented Programming (OOP)", "Functional Programming (FP)",
+    "JavaScript", "Python", "TypeScript", "C", "OOP", "FP",
   ],
   "Frontend Development": [
-    "React", "React Native", "React Router", "React-Bootstrap", "Angular", "Angular Material", "VueJS",
-    "Vuetify", "Bootstrap", "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Tailwind CSS", "Context API",
+    "React", "React Native", "React Router", "React-Bootstrap", "TailwindCSS", "Angular", "Angular Material", "Bootstrap", 
+    "HTML", "CSS", "SCSS", "JQuery", "Recharts", "Redux", "Context API",
   ],
   "Backend Development": [
-    "NodeJS", "ExpressJS", "Django", "AWS Lambda", "RESTful API", "JSON", "XML", "Object-Relational Mappers (ORMs)", "Matplotlib",
+    "NodeJS", "ExpressJS", "Django", "RESTful API", "JSON", "XML", "ORM",
   ],
   "Databases": [
     "MongoDB", "PostgreSQL", "MySQL", "SQLite", "SQLAlchemy", "Admin4", "MariaDB", "Firebase Realtime DB",
@@ -48,7 +48,7 @@ const additionalTools = {
     "Heroku", "Netlify", "AWS", "Firebase", "Github Pages",
   ],
   "Authentication & Security": [
-    "OAuth 2.0", "JSON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS",
+    "OAuth 2.0", "JSON Web Tokens (JWT)", "CORS (Cross-Origin Resource Sharing)", "PassportJS", "PyJWT"
   ],
   "Testing": [
     "Test Driven Development (TDD)", "Behavior Driven Development (BDD)",
@@ -62,14 +62,14 @@ const additionalTools = {
     "JSDoc", "TSDoc",
   ],
   "DevOps/Environment Management": [
-    "CI/CD", "Atatus (Application Performance Monitoring)", "Docker", "Zsh", "MacOS", "PowerShell", "Windows", "npm",
+    "CI/CD", "Lighthouse", "Docker", "Zsh", "MacOS", "npm/npx",
     "pip", "ng",
   ],
   "Development Tools/Environments": [
-    "Visual Studio Code", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman", "Matlab",
+    "Visual Studio Code", "Cursor", "Git", "Xcode", "Android Studio", "CodeBlocks", "Repl", "CodeSandBox", "Postman", "Matlab",
   ],
   "Project Management & Design Tools": [
-    "Trello", "Jira(Atlassian)", "Canva", "Figma", "Sketch", "Blender", "AI",
+    "Trello", "Jira", "Confluence", "Canva", "Figma", "Sketch", "Blender", "Spline", "AI Gen",
   ],
 };
 
@@ -179,7 +179,7 @@ const Technologies = ({ isDarkMode }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5 }}
         >
-          See All My Technologies Here
+          Technologies I Have Worked With
         </motion.div>
         {showAdditionalTools && (
           <div ref={listRef} className="relative inline-block mt-4">

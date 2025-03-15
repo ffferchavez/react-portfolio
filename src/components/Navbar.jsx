@@ -9,7 +9,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         {/* Logo on the left */}
         <div className="flex-shrink-0">
           <a href="https://manuel-fernando.com/" target="_blank" rel="noopener noreferrer">
-            <img className="mx-2 w-8 cursor-pointer" src={logo} alt="logo" style={{ borderRadius: "5px" }} />
+            <img className="mx-2 w-8 cursor-pointer" src={logo} alt="logo" style={{ borderRadius: "8px" }} />
           </a>
         </div>
 

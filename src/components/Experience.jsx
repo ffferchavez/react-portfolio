@@ -61,15 +61,15 @@ const Experience = ({ isDarkMode }) => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="text-center mt-10 mb-10"
+        className="text-center mt-20 mb-20"
       >
         <a
           href={cvPdf}
           download
-          className={`no-underline ${isDarkMode ? 'text-gray-200' : 'text-gray-900'}`}
-          style={{ textDecoration: "none", transition: "color 0.3s ease" }}
+          className={`text-2xl no-underline ${isDarkMode ? 'text-gray-200' : 'text-gray-900'}`}
+          style={{ textDecoration: "none", transition: "color 0.2s ease" }}
         >
-          Resume Download
+          Download My Resume Here
         </a>
         <style>
           {`

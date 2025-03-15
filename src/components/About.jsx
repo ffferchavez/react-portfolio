@@ -17,9 +17,9 @@ const About = ({ isDarkMode }) => {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
           className="w-full lg:w-1/2 lg:p-8 mb-10 flex items-center justify-center"
-          style={{ height: '500px' }}
+          style={{ height: '600px' }}
         >
-          <div className={`rounded-2xl overflow-hidden filter grayscale-[50%] brightness-85 ${isDarkMode ? 'bg-darkBackground' : 'bg-lightBackground'}`} style={{ width: '500px', height: '500px' }}>
+          <div className={`rounded-full overflow-hidden filter grayscale-[100%] brightness-10 ${isDarkMode ? 'bg-darkBackground' : 'bg-lightBackground'}`} style={{ width: '500px', height: '500px' }}>
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}

@@ -10,7 +10,7 @@ const Contact = ({ isDarkMode }) => {
         transition={{ duration: 0.5 }}
         className={`my-10 text-center text-4xl ${isDarkMode ? 'text-darkText' : 'text-lightText'}`}
       >
-        Get in Touch
+        Let's Talk!
       </motion.h2>
       <div className="text-center tracking-tighter">
         <motion.p
@@ -56,11 +56,11 @@ const Contact = ({ isDarkMode }) => {
           text-decoration: none;
           display: block;
           margin-top: 10px;
-          transition: color 0.1s ease;
+          transition: color 0s ease;
         }
         .email-link:hover, .impressum-link:hover {
           color: #48CAE4;
-          transition: color 0.1s ease;
+          transition: color 0s ease;
         }
       `}</style>
     </div>
