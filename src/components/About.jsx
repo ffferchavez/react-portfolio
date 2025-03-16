@@ -12,6 +12,7 @@ const About = ({ isDarkMode }) => {
       } mt-10 pb-4`}
     >
       <h2
+        id="about"
         className={`lg:my-20 text-center text-4xl ${
           isDarkMode ? "text-neutral-300" : "text-neutral-800"
         }`}
