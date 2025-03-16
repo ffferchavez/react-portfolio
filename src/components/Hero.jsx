@@ -28,7 +28,7 @@ const Hero = ({ isDarkMode }) => {
   }, []);
 
   return (
-    <div className="border-b pb-4 lg:mb-8 dark:border-neutral-900">
+    <div className="hero border-b pb-4 lg:mb-8 dark:border-neutral-900">
       <div className="flex flex-wrap">
         <div className="w-full flex flex-col items-center text-center">
           <div className="flex flex-col">

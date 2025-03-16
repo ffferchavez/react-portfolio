@@ -1,7 +1,20 @@
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const Contact = ({ isDarkMode }) => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = document.getElementById("hero")?.offsetHeight || 0;
+      setShowButton(window.scrollY > heroHeight);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
       className={`border-b pb-20 ${
@@ -40,7 +53,7 @@ const Contact = ({ isDarkMode }) => {
           className={`block email-link ${
             isDarkMode ? "text-gray-400" : "text-gray-700"
           }`}
-          whileHover={{ color: "#fff" }}
+          whileHover={{ color: isDarkMode ? "#fff" : "#deab12" }}
           initial={{
             opacity: 0,
             x: -100,
@@ -60,7 +73,7 @@ const Contact = ({ isDarkMode }) => {
           className={`block impressum-link ${
             isDarkMode ? "text-gray-400" : "text-gray-700"
           }`}
-          whileHover={{ color: "#fff" }}
+          whileHover={{ color: isDarkMode ? "#fff" : "#deab12" }}
           initial={{
             opacity: 0,
             x: 100,
@@ -76,6 +89,19 @@ const Contact = ({ isDarkMode }) => {
           Impressum
         </motion.a>
       </div>
+      {showButton && (
+        <a
+          href="hero"
+          className={`fixed mr-5 bottom-5 right-5 text-5xl transition-all ${
+            isDarkMode
+              ? "text-gray-400 hover:text-gray-200"
+              : "text-gray-700 hover:text-gray-600"
+          }`}
+          title="Back to Top"
+        >
+          ^
+        </a>
+      )}
     </div>
   );
 };
