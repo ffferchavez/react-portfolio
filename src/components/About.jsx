@@ -35,14 +35,13 @@ const About = ({ isDarkMode }) => {
           <div
             className={`rounded-full overflow-hidden transition-all duration-300 ${
               isDarkMode ? "bg-darkBackground" : "bg-lightBackground"
-            }`}
-            style={{ width: "500px", height: "500px" }}
+            } w-[80vw] max-w-[500px] h-[80vw] max-h-[500px]`}
           >
             <motion.img
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
-              className="w-full h-full object-cover filter grayscale-[90%] brightness-50 hover:grayscale-[70%] hover:brightness-75 transition-all duration-300"
+              className="w-full h-full object-cover rounded-full filter grayscale-[90%] brightness-50 hover:grayscale-[70%] hover:brightness-75 transition-all duration-300"
               src={aboutImg}
               alt="about"
             />
