@@ -20,7 +20,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       <div className="flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex-shrink-0">
-          <a href="#hero" target="_blank" rel="noopener noreferrer">
+          <a href="www.manuel-fernando.com">
             <img
               className="mx-2 w-8 cursor-pointer"
               src={logo}
