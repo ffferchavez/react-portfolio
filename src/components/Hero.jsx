@@ -33,7 +33,7 @@ const Hero = ({ isDarkMode }) => {
               className="text-5xl font-extrabold tracking-tight"
               style={{
                 backgroundImage: isDarkMode
-                  ? "linear-gradient(to right, #000, #b8b6b2, #1B1B1B)" // Light colors gradient for dark mode
+                  ? "linear-gradient(to right, #fff, #1B1B1B, #3c3c3c)" // Light colors gradient for dark mode
                   : "linear-gradient(to right, #000, #deab12, #1B1B1B)", // Dark colors gradient for light mode
                 WebkitBackgroundClip: "text",
                 WebkitTextStroke: `2px ${isDarkMode ? "black" : "white"}`,
@@ -53,6 +53,7 @@ const Hero = ({ isDarkMode }) => {
             </motion.p>
           </div>
         </div>
+        {/*
         <div className="w-full lg:w-1/2 lg:p-8 flex items-center justify-center">
           <motion.div
             initial={{ x: 100, opacity: 0 }}
@@ -62,6 +63,7 @@ const Hero = ({ isDarkMode }) => {
             style={{ backgroundImage: `url(${profilePic})` }}
           />
         </div>
+        */}
       </div>
       <style>
         {`

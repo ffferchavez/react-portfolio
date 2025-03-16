@@ -37,7 +37,7 @@ const App = () => {
           }`}
         >
           {isDarkMode ? (
-            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_30%_200px,#aaa,transparent)]"></div>
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_30%_200px,#aaa)]"></div>
           ) : (
             <div className="absolute inset-0 h-full w-full">
               <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_30%_200px,#1c1c1c)]"></div>
