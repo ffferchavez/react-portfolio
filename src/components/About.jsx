@@ -9,10 +9,10 @@ const About = ({ isDarkMode }) => {
     <div
       className={`border-b ${
         isDarkMode ? "border-neutral-900" : "border-neutral-300"
-      } pb-4`}
+      } mt-10 pb-4`}
     >
       <h2
-        className={`my-20 text-center text-4xl ${
+        className={`lg:my-20 text-center text-4xl ${
           isDarkMode ? "text-neutral-300" : "text-neutral-800"
         }`}
       >
@@ -29,7 +29,7 @@ const About = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2 lg:p-8 mb-10 flex items-center justify-center"
+          className="w-full lg:w-1/2 lg:p-8 lg:mb-8 flex items-center justify-center"
           style={{ height: "600px" }}
         >
           <div
