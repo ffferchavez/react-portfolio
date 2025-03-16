@@ -53,8 +53,8 @@ const Hero = ({ isDarkMode }) => {
                   transition={{ duration: 0.5 }}
                   className={`p-6 font-extrabold tracking-tight text-center ${
                     titles[currentTitleIndex] === "Mechatronics Engineer"
-                      ? "text-4xl sm:text-5xl lg:text-8xl"
-                      : "text-5xl lg:text-8xl"
+                      ? "text-4xl sm:text-5xl lg:text-7xl"
+                      : "text-5xl lg:text-7xl"
                   }`}
                   style={{
                     backgroundImage: isDarkMode
