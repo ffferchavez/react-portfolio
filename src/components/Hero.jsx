@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { HERO_CONTENT } from "../constants";
-import profilePic from "../assets/mfProfile.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 const container = (delay) => ({
@@ -43,37 +42,45 @@ const Hero = ({ isDarkMode }) => {
             </motion.h2>
 
             {/* Animate Presence for Smooth Title Switch */}
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={titles[currentTitleIndex]} // Change key to trigger re-render
-                variants={container(0.5)}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.5 }}
-                className="text-6xl p-6 lg:text-8xl font-extrabold tracking-tight"
-                style={{
-                  backgroundImage: isDarkMode
-                    ? "linear-gradient(to right, #f1f1f1, #1B1B1B, #fff, #3c3c3c)" // Dark
-                    : "linear-gradient(to right, #000, #deab12, #1B1B1B)", // Light
-                  WebkitBackgroundClip: "text",
-                  WebkitTextStroke: `2px ${isDarkMode ? "black" : "white"}`,
-                  backgroundClip: "text",
-                  color: "transparent",
-                }}
-              >
-                {titles[currentTitleIndex]}
-              </motion.span>
-            </AnimatePresence>
+            <div className="h-[140px] sm:h-[150px] md:h-[160px] lg:h-[210px] flex items-center justify-center">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={titles[currentTitleIndex]} // Change key to trigger re-render
+                  variants={container(0.5)}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.5 }}
+                  className={`p-6 font-extrabold tracking-tight text-center ${
+                    titles[currentTitleIndex] === "Mechatronics Engineer"
+                      ? "text-4xl sm:text-5xl lg:text-8xl"
+                      : "text-5xl lg:text-8xl"
+                  }`}
+                  style={{
+                    backgroundImage: isDarkMode
+                      ? "linear-gradient(to right, #f1f1f1, #1B1B1B, #fff, #3c3c3c)" // Dark
+                      : "linear-gradient(to right, #000, #deab12, #1B1B1B)", // Light
+                    WebkitBackgroundClip: "text",
+                    WebkitTextStroke: `2px ${isDarkMode ? "black" : "white"}`,
+                    backgroundClip: "text",
+                    color: "transparent",
+                  }}
+                >
+                  {titles[currentTitleIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </div>
 
-            <motion.p
-              variants={container(1)}
-              initial="hidden"
-              animate="visible"
-              className="my-2 font-thin mb-28 py-6 tracking-tighter dark:text-darkText text-lightText"
-            >
-              {HERO_CONTENT}
-            </motion.p>
+            <div className="min-h-[80px] flex items-center justify-center">
+              <motion.p
+                variants={container(1)}
+                initial="hidden"
+                animate="visible"
+                className="my-2 font-thin py-6 tracking-tighter dark:text-darkText text-lightText text-center"
+              >
+                {HERO_CONTENT}
+              </motion.p>
+            </div>
           </div>
         </div>
       </div>
