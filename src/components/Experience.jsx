@@ -31,7 +31,7 @@ const Experience = ({ isDarkMode }) => {
             >
               <p
                 className={`mb-2 ml-20 text-sm ${
-                  isDarkMode ? "text-black" : "text-gray-600"
+                  isDarkMode ? "text-white" : "text-black"
                 }`}
               >
                 {experience.year}
