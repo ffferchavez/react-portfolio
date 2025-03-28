@@ -135,10 +135,17 @@ export const PROJECTS = [
     title: "MexiGo Landing Page",
     image: project11,
     description:
-      "MexiGo Website: MexiGo is a professionally designed and fully responsive website, crafted with a user-friendly experience in mind. Designed in Figma and Canva, and developed and deployed using Framer, the site seamlessly blends aesthetics with performance. It features an integrated CMS, allowing the client to easily update and manage content, including text and images. Hosted on a custom domain, MexiGo ensures a smooth and engaging experience across all devices.",
-    technologies: ["Figma", "Framer", "Canva", "Hostinger", "UX/UI"],
-    githubLink: "https://github.com/ffferchavez/mex-plora-tours",
-    projectUrl: "https://mexigo.framer.ai/",
+      "MexiGo Website: MexiGo is a professionally designed and fully responsive website, crafted with a user-friendly experience in mind. Designed in Figma and Canva, and developed and deployed using React and Netlify, the site seamlessly blends aesthetics with performance. It features an integrated CMS, allowing the client to easily update and manage content, including text and images. Hosted on a custom domain, MexiGo ensures a smooth and engaging experience across all devices.",
+    technologies: [
+      "React",
+      "TailwindCSS v4",
+      "EmailJS",
+      "Figma",
+      "Netlify",
+      "UX/UI",
+    ],
+    githubLink: "https://github.com/ffferchavez/escapes-mexigo",
+    projectUrl: "https://www.escapes-mexigo.com",
   },
   {
     title: "Recipes Management",
