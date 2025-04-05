@@ -34,7 +34,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         </div>
 
         {/* Social media icons on the right */}
-        <div className="flex items-center gap-3 m-8 text-2xl">
+        <div className="flex items-center gap-3 mt-8 text-2xl">
           <a
             href="https://www.linkedin.com/in/ffferchavez"
             target="_blank"
@@ -83,7 +83,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       </div>
 
       {/* Theme Toggle Button in a new row */}
-      <div className="flex justify-end mt-2 m-8">
+      <div className="flex justify-end mt-8 mb-8">
         <button
           onClick={toggleTheme}
           className={`flex items-center text-xs rounded transition-colors duration-300 ease-in-out ${
