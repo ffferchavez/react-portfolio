@@ -34,7 +34,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
         </div>
 
         {/* Social media icons on the right */}
-        <div className="flex items-center gap-3 mt-8 text-2xl">
+        <div className="flex items-center gap-3 text-2xl">
           <a
             href="https://www.linkedin.com/in/ffferchavez"
             target="_blank"
