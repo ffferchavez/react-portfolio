@@ -1,12 +1,12 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.png";
-import project6 from "../assets/projects/project-6.png";
-import project7 from "../assets/projects/project-7.png";
-import project8 from "../assets/projects/project-8.png";
-import project9 from "../assets/projects/project-9.png";
-import project10 from "../assets/projects/project-10.png";
-import project11 from "../assets/projects/project-11.png";
+import project1 from "../assets/projects/project-1.webp";
+import project2 from "../assets/projects/project-2.webp";
+import project3 from "../assets/projects/project-3.webp";
+import project6 from "../assets/projects/project-6.webp";
+import project7 from "../assets/projects/project-7.webp";
+import project8 from "../assets/projects/project-8.webp";
+import project9 from "../assets/projects/project-9.webp";
+import project10 from "../assets/projects/project-10.webp";
+import project11 from "../assets/projects/project-11.webp";
 
 export const HERO_CONTENT = `Full-Stack Developer with over a decade of Industry experience, specializing in building responsive, 
 high-performance applications using modern technologies and frameworks. Combines technical precision with innovative problem-solving 

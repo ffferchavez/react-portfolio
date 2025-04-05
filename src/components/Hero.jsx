@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { HERO_CONTENT } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -22,7 +22,7 @@ const Hero = ({ isDarkMode }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prevIndex) => (prevIndex + 1) % titles.length);
-    }, 2500); // Switch every 2.5 seconds
+    }, 2000); // Switch every 2.5 seconds
 
     return () => clearInterval(interval);
   }, []);

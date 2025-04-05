@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/mfLogo.png";
+import logo from "../assets/mfLogo.webp";
 import {
   FaLinkedin,
   FaGithub,
