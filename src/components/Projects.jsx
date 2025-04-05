@@ -19,7 +19,7 @@ const Projects = ({ isDarkMode }) => {
       >
         Some Projects
       </motion.h2>
-      <div>
+      <section aria-labelledby="projects">
         {PROJECTS.map((project, index) => (
           <div
             key={index}
@@ -36,12 +36,16 @@ const Projects = ({ isDarkMode }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
+                aria-label={`Visit ${project.title} live project`}
+                title={`Visit ${project.title}`}
               >
                 <img
                   src={project.image}
                   width={200}
                   height={200}
                   alt={project.title}
+                  loading="lazy"
+                  title={project.title}
                   className="mb-2 rounded transform transition-transform duration-300 hover:scale-105"
                 />
               </a>
@@ -52,6 +56,8 @@ const Projects = ({ isDarkMode }) => {
                 className={`text-sm font-semibold mt-2 mb-2 email-link ${
                   isDarkMode ? "text-gray-300" : "text-gray-900"
                 }`}
+                aria-label={`Visit ${project.title} live project`}
+                title={`Visit ${project.title}`}
                 whileHover={{ color: "#deab12" }} // Hover effect
                 initial={{
                   opacity: 0,
@@ -109,6 +115,8 @@ const Projects = ({ isDarkMode }) => {
                     isDarkMode ? "text-gray-300" : "text-gray-800"
                   }`}
                   style={{ fontSize: "0.7rem", opacity: 0.6 }}
+                  aria-label={`View ${project.title} source code on GitHub`}
+                  title={`View ${project.title} source code`}
                 >
                   Github Code
                 </a>
@@ -121,6 +129,8 @@ const Projects = ({ isDarkMode }) => {
                       isDarkMode ? "text-gray-300" : "text-gray-800"
                     }`}
                     style={{ fontSize: "0.7rem", opacity: 0.6 }}
+                    aria-label={`Read case study for ${project.title}`}
+                    title={`Read case study for ${project.title}`}
                   >
                     Case Study
                   </a>
@@ -129,7 +139,7 @@ const Projects = ({ isDarkMode }) => {
             </motion.div>
           </div>
         ))}
-      </div>
+      </section>
     </div>
   );
 };

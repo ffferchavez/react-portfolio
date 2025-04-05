@@ -72,6 +72,7 @@ const Contact = ({ isDarkMode }) => {
         </motion.p>
         <motion.a
           href={`mailto:${CONTACT.email}`}
+          aria-label={`Email: ${CONTACT.email}`}
           className={`block email-link ${
             isDarkMode ? "text-gray-400" : "text-gray-700"
           }`}
@@ -91,7 +92,9 @@ const Contact = ({ isDarkMode }) => {
           {CONTACT.email}
         </motion.a>
         <motion.a
-          href="src/constants/impressum.html"
+          href="/impressum.html"
+          title="Impressum"
+          aria-label="View the Impressum page"
           className={`block impressum-link ${
             isDarkMode ? "text-gray-400" : "text-gray-700"
           }`}
@@ -189,6 +192,8 @@ const Contact = ({ isDarkMode }) => {
           {/* Pages Menu Button */}
           <button
             onClick={handleClick}
+            aria-label="Toggle page navigation"
+            title="Toggle navigation"
             className={`transition-transform font-semibold duration-500 text-7xl ${
               isExpanded ? "rotate-[315deg]" : "rotate-0"
             } ${

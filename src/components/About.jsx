@@ -1,4 +1,3 @@
-import React from "react";
 import aboutImg from "../assets/mfAbout.webp";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
@@ -30,8 +29,7 @@ const About = ({ isDarkMode }) => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2 lg:p-8 lg:mb-8 flex items-center justify-center"
-          style={{ height: "600px" }}
+          className="w-full lg:w-1/2 lg:p-8 lg:mb-8 flex items-center justify-center h-[600px]"
         >
           <div
             className={`rounded-full overflow-hidden transition-all duration-300 ${
@@ -39,12 +37,13 @@ const About = ({ isDarkMode }) => {
             } w-[80vw] max-w-[500px] h-[80vw] max-h-[500px]`}
           >
             <motion.img
+              loading="lazy"
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.2 }}
               className="w-full h-full object-cover rounded-full filter grayscale-[90%] brightness-50 hover:grayscale-[70%] hover:brightness-75 transition-all duration-300"
               src={aboutImg}
-              alt="about"
+              alt="Portrait of Manuel Fernando, Full Stack Developer"
             />
           </div>
         </motion.div>

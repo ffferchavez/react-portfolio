@@ -5,6 +5,7 @@ import cvPdf from "../assets/manuel-fernando-resume.pdf";
 const Experience = ({ isDarkMode }) => {
   return (
     <div
+      lang="en"
       className={`border-b pb-4 ${
         isDarkMode ? "border-neutral-900" : "border-neutral-300"
       }`}
@@ -20,7 +21,7 @@ const Experience = ({ isDarkMode }) => {
       >
         Experience
       </motion.h2>
-      <div>
+      <section aria-labelledby="experience">
         {EXPERIENCES.map((experience, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             <motion.div
@@ -81,7 +82,7 @@ const Experience = ({ isDarkMode }) => {
             </motion.div>
           </div>
         ))}
-      </div>
+      </section>
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
@@ -91,6 +92,8 @@ const Experience = ({ isDarkMode }) => {
         <a
           href={cvPdf}
           download
+          aria-label="Download resume as PDF"
+          title="Download Manuel Fernando's resume"
           className={`text-2xl no-underline transition-colors duration-200 ${
             isDarkMode
               ? "text-gray-300 hover:text-white"

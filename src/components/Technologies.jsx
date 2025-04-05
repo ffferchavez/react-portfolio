@@ -272,6 +272,8 @@ const Technologies = ({ isDarkMode }) => {
     >
       <motion.h2
         id="technologies"
+        role="heading"
+        aria-level="1"
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
@@ -296,6 +298,8 @@ const Technologies = ({ isDarkMode }) => {
             className={`relative mb-4 rounded-2xl border-4 ${
               isDarkMode ? "border-neutral-800" : "border-neutral-300"
             } p-4 flex items-center justify-center group`}
+            aria-label={tech.name}
+            title={tech.name}
           >
             {tech.name === "Figma" ? (
               <div className="bg-gradient-to-br from-[#F24E1E] via-[#b930e7] to-[#0ACF83] p-1 rounded-lg">
@@ -332,6 +336,8 @@ const Technologies = ({ isDarkMode }) => {
               ? "text-darkText hover:text-black"
               : "text-lightText hover:text-[#ba9935]"
           }`}
+          aria-label="Technologies I Have Worked With"
+          title="Technologies I Have Worked With"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 100 }}
@@ -352,6 +358,8 @@ const Technologies = ({ isDarkMode }) => {
             >
               <button
                 onClick={closeAdditionalTools}
+                aria-label="Close popup"
+                title="Close"
                 className={`absolute top-2 right-2 ${
                   isDarkMode ? "text-gray-400" : "text-gray-800"
                 }`}
@@ -387,6 +395,8 @@ const Technologies = ({ isDarkMode }) => {
                       ? "text-darkText hover:text-gray-500"
                       : "text-lightText hover:text-[#deab12]"
                   }`}
+                  aria-label="My Hardware Dev Tools Here"
+                  title="My Hardware Dev Tools Here"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 100 }}
@@ -406,6 +416,8 @@ const Technologies = ({ isDarkMode }) => {
                   >
                     <button
                       onClick={closeHardwareTools}
+                      aria-label="Close popup"
+                      title="Close"
                       className={`absolute top-2 right-2 ${
                         isDarkMode ? "text-gray-400" : "text-gray-800"
                       }`}

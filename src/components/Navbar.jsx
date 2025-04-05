@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../assets/mfLogo.webp";
 import {
   FaLinkedin,
@@ -20,7 +19,11 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
       <div className="flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex-shrink-0">
-          <a href="www.manuel-fernando.com">
+          <a
+            href="https://www.manuel-fernando.com"
+            aria-label="Go to homepage"
+            title="Manuel Fernando Portfolio"
+          >
             <img
               className="mx-2 w-8 cursor-pointer"
               src={logo}
@@ -36,6 +39,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             href="https://www.linkedin.com/in/ffferchavez"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn profile of ffferchavez"
+            title="LinkedIn"
           >
             <FaLinkedin
               className={`${isDarkMode ? "text-darkText" : "text-lightText"}`}
@@ -45,6 +50,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             href="https://github.com/ffferchavez"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub profile of ffferchavez"
+            title="GitHub"
           >
             <FaGithub
               className={`${isDarkMode ? "text-darkText" : "text-lightText"}`}
@@ -54,6 +61,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             href="https://x.com/ffferchavez"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Twitter profile of ffferchavez"
+            title="Twitter"
           >
             <FaTwitter
               className={`${isDarkMode ? "text-darkText" : "text-lightText"}`}
@@ -63,6 +72,8 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             href="https://medium.com/@ffferchavez"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Medium profile of ffferchavez"
+            title="Medium"
           >
             <FaMedium
               className={`${isDarkMode ? "text-darkText" : "text-lightText"}`}
@@ -79,6 +90,7 @@ const Navbar = ({ toggleTheme, isDarkMode }) => {
             isDarkMode ? "text-darkText" : "text-lightText"
           }`}
           aria-label="Toggle theme"
+          title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
         >
           {isDarkMode ? (
             <FaMoon className="text-md mr-2" />
