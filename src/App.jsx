@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -33,7 +33,7 @@ const App = () => {
           className={`relative h-full w-full ${
             isDarkMode
               ? "bg-black"
-              : "bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+              : "bg-white bg-light-grid bg-[size:6rem_4rem]"
           }`}
         >
           {isDarkMode ? (
