@@ -40,7 +40,7 @@ const App = () => {
             <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_400px_at_3%_200px,#aaa,transparent)]"></div>
           ) : (
             <div className="absolute inset-0 h-full w-full">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_30%_200px,#1c1c1c)]"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_30%_200px,#f5f5f5,transparent)]"></div>
             </div>
           )}
         </div>
